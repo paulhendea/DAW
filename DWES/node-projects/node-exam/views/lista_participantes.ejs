@@ -1,0 +1,25 @@
+<%- include('cabecera'); %>
+
+<h1>Listado de participantes</h1>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Categoria</th>
+      </tr>
+    </thead>
+    <% if (participantes.length === 0) { %>
+      <td colspan="3">No hay participantes :(</td>
+    <% } else { %>
+        <% participantes.forEach(participante => { %>
+          <tr>
+            <td><%= participante.apellidos %></td>
+            <td><%= participante.nombre %></td>
+          </tr>
+        <% }) %>
+    <% } %>
+</table>
+
+<%- include('pie'); %>

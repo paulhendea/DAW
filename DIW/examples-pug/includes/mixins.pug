@@ -1,0 +1,6 @@
+mixin createList(...items)
+        ul: each item in items 
+            li #{item}
+
+mixin createImage(url, alt)
+    div: img(src=url, alt=alt)

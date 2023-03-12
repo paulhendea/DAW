@@ -1,0 +1,45 @@
+html(lang="es")
+  head
+    include includes/head-meta.pug
+    title Café.net Club
+
+    // CSS
+    link(rel="stylesheet", href="../css/style.css")
+    link(rel="stylesheet", href="../css/preparacion.css")
+
+  body
+    main
+      p
+        include includes/youtube-video.html
+
+      // video from https://www.pexels.com/
+      video(width="560" controls autoplay muted loop)
+        source(src="../video/cafe.mp4" type="video/mp4")
+        source(src="../video/cafe.ogv" type="video/ogv")
+        p Video not supported by your browser
+      
+      p
+        // images from https://www.pexels.com/
+        include includes/google-photos.html
+
+      p
+        // noticias culturales Colombia https://www.expansion.com/?cid=%20GEN22001&s_kw=Latinoam%E9rica?cid=%20GEN22001&s_kw=Latinoam%E9rica
+        include includes/widget-news.html
+
+    aside
+      // google maps cafetería colombia
+      include includes/widget-google-maps.html
+
+      // bing maps cafetería colombia
+      include includes/widget-bing-maps.html
+
+      // weather widget from https://weatherwidget.io/
+      include includes/widget-weather.html
+
+      // calendar from google calendar
+      include includes/widget-calendar.html
+
+      // esports widget from https://blog.toornament.com/2022/05/how-to-integrate-tournament-results-on-your-own-website/
+      include includes/widget-sport-score.html
+
+      // TODO add random widget

@@ -1,0 +1,17 @@
+{
+  "name": "exercise_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "greeting.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Paul Hendea",
+  "license": "ISC",
+  "dependencies": {
+    "loadsh": "^0.0.4",
+    "moment": "^2.29.4"
+  }
+}

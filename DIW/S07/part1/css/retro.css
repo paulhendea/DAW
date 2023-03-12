@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Tiro+Telugu&display=swap');
+@font-face {
+  font-family: Retrolight;
+  src: 
+    url(../../fonts/Retrolight.otf) format('opentype'), 
+    url(../../fonts/Retrolight.ttf) format('opentype');
+}
+
+:root {
+  font-family: 'Tiro Telugu', sans-serif;
+
+  background-image: url(../../img/background-pattern.webp);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+nav {
+  background-color: white;
+}
+nav ul li a {
+  display: block;
+  padding: 0.2rem;
+}
+nav ul li a:link {
+  color: blue;
+}
+nav ul li a:visited {
+  color: blueviolet;
+}
+nav ul li a:hover {
+  outline: 5px outset blue;
+  background-color: blue;
+  color: white;
+}
+nav ul li button#styleButton {
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: 3px solid black;
+  border: 5px outset green;
+  background-color: green;
+  color: white;
+}
+nav ul li button#styleButton:hover {
+  border-radius: 5px;
+}
+nav hr {
+  display: none;
+}
+
+header#header {
+  background-color: white;
+  box-shadow: 10px 10px 1px 0px rgba(0,0,0,0.75);
+}
+header#header h1 {
+  font-family: Retrolight, 'Tiro Telugu', sans-serif;
+  font-size: 4rem;
+  font-weight: normal;
+  text-shadow:5px 5px 2px rgba(0, 0, 0, 0.5);
+}
+header#header h1:hover::after {
+  content: ' :)';
+  font-family: 'Courier New', Courier, monospace;
+}
+header#header h1::first-letter {
+  font-style: italic;
+}
+header#header div img {
+  padding: 8px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(254, 255, 0, 1) 25%,
+    rgba(0, 255, 55, 1) 50%,
+    rgba(4, 0, 255, 1) 75%,
+    rgba(252, 69, 239, 1) 100%
+  );
+}
+
+main section {
+  background-color: white;
+  box-shadow: 10px 10px 1px 0px rgba(0,0,0,0.75);
+}
+main section#skills article#technologies ul.cards li {
+  filter: drop-shadow(5px 5px 2px #000);
+}
+main section#skills article#languages ul progress {
+  accent-color: lightblue;
+}
+main section#skills article#languages ul progress[value="80"], 
+main section#skills article#languages ul progress[value="90"], 
+main section#skills article#languages ul progress[value="100"] {
+  accent-color: lightgreen;
+}
+
+main section#experience table, 
+main section#experience table th, 
+main section#experience table td {
+  padding-inline-end: 1.5rem;
+}
+
+main section > a:last-child, 
+aside > a:last-child, 
+footer > a:last-child {
+  padding: 0.5rem;
+}
+main section > a:last-child:link, 
+aside > a:last-child:link, 
+footer > a:last-child:link {
+  color: blue;
+}
+main section > a:last-child:visited, 
+aside > a:last-child:visited, 
+footer > a:last-child:visited {
+  color: blueviolet;
+}
+main section > a:last-child:hover, 
+aside > a:last-child:hover, 
+footer > a:last-child:hover {
+  outline: 5px outset blue;
+  background-color: blue;
+  color: white;
+}
+main section > a:last-child:hover img, 
+aside > a:last-child:hover img, 
+footer > a:last-child:hover img {
+  filter: invert(100%);
+}
+
+aside {
+  background-color: white;
+  box-shadow: 10px 10px 1px 0px rgba(0,0,0,0.75);
+}
+aside ol li:hover::before {
+  content: '-> ';
+}
+
+footer {
+  background-color: black;
+  background-image: url(../../img/background-pattern-footer.webp);
+}
+footer ul img + a {
+  padding-left: 1rem;
+}

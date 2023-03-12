@@ -1,0 +1,74 @@
+/* Fonts */
+@font-face {
+  font-family: FiraCode;
+  src: url('../font/FiraCode-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: FiraCode;
+  src: url('../font/FiraCode-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: FiraCode;
+  src: url('../font/FiraCode-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Initialize values to 0 to normalize through all browsers */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Element selector */
+html {
+  font-family: FiraCode, monospace;
+  font-size: 16px;
+}
+
+body {
+  padding: 1.5rem;
+  border: 1px solid red;
+  background-color: aquamarine;
+}
+
+h1 {
+  font-size: 1.5rem; /* references root element (html) */
+  letter-spacing: 0.25em; /* references itself */
+  color: blue;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: green;
+  margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* Class selector */
+/* multiple elements can belong to a class */
+.borderRed {
+  border: 1px solid red;
+}
+
+.backgroundYellow {
+  background-color: yellow;
+}
+
+strong.backgroundYellow {
+  background-color: orange;
+}
+
+p#lastParagraph { /* better syntax same effect, more clear when reading */
+  border-bottom: 1px solid violet;
+}

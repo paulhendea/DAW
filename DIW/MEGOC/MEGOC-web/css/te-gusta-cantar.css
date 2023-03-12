@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-block: 2rem;
+  background-color: var(--black);
+}
+main article {
+  margin-block-end: 2rem;
+  padding-inline: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 2rem;
+}
+main article .content h3 {
+  margin-block-end: 1rem;
+  text-transform: uppercase;
+  color: var(--white);
+}
+main article .content p {
+  color: var(--silver);
+}
+main article #map iframe {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+/******************/
+/* TABLET VERSION */
+/******************/
+
+@media(min-width: 768px) {
+  
+  main article {
+    flex-flow: row-reverse nowrap;
+    max-width: 80%;
+  }
+  main article .content {
+    width: 50%;
+  }
+  main article .content p {
+    margin-block-end: 1rem;
+  }
+  main article #map iframe {
+    width: 400px;
+    height: 400px;
+  }
+
+}

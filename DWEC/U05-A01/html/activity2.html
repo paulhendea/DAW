@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 2</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    #form {
+      margin-bottom: 1em;
+      padding: 1em;
+      border: 1px solid black;
+      border-radius: 10px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #response {
+      width: 100%;
+    }
+    
+    #response table {
+      margin-bottom: 2em;
+    }
+
+    #response table,
+    table td {
+      border-collapse: collapse;
+    }
+  </style>
+
+  <!-- JS -->
+  <script src="../js/activity2.js" async defer></script>
+
+</head>
+<body>
+  
+  <header>
+    <h1 class="center">Table generator</h1>
+  </header>
+
+  <main>
+    <section id="form">
+      <p><input type="number" id="row" name="row" placeholder="Rows" autofocus></p>
+      <p><input type="number" id="cols" name="cols" placeholder="Columns"></p>
+      <p><input type="text" id="color" name="color" placeholder="Border color"></p>
+      <p>
+        <button onclick="print()">Print Table</button>
+        <button onclick="reset()">Reset</button>
+      </p>
+    </section>
+
+    <section id="response"></section>
+  </main>
+  
+</body>
+</html>

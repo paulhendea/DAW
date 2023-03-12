@@ -1,0 +1,37 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+main article {
+  column-count: 2;
+  column-gap: 5rem;
+  column-rule: 2px solid blue;
+  text-align: justify;
+}
+
+div#frame {
+  position: relative;
+}
+
+div#frame img[alt="photo"] {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  filter: blur(1px) hue-rotate(100deg);
+}
+
+div#frame img[alt="logo"] {
+  position: absolute;
+  width: 50px;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1;
+  filter: drop-shadow(0 0 5px blue);
+}

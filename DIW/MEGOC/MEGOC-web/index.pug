@@ -1,0 +1,58 @@
+doctype html
+html(lang="es")
+  header
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title MEGÒC
+
+    // CSS
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.css", integrity="sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css", integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="../css/styles.css")
+    link(rel="stylesheet", href="../css/quienes-somos.css")
+
+    // JS 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.js", integrity="sha512-AZURF+lGBgrV0WM7dsCFwaQEltUV5964wxMv+TSzbb6G1/Poa9sFxaCed8l8CcFRTiP7FsCgCyOm/kf1LARyxA==", crossorigin="anonymous", referrerpolicy="no-referrer", defer)
+    script(src="../js/carousel.js", defer) 
+    script(src="../js/main.js", defer)
+  
+  body
+    // nav
+    include includes/navbar.pug
+
+    main
+      header
+        #title: ul
+          li MEGÒC
+          li gospel
+          li música moderna
+          li a capella
+          li en directo
+          li Oliva
+      
+      article.quienes-somos
+        .img.contain: img(src="../img/logo_lg.png", alt="Imagen logo")
+        .content
+          h3 ¿Quiénes somos?
+          p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ea illo eligendi rem placeat consequuntur distinctio ex nesciunt a? Saepe quam inventore obcaecati? Animi quia veniam cumque fugiat quae. Magnam!
+
+      .carousel
+        .carousel__container
+          .carousel__list
+            .carousel__item: img(src="../img/img2.jpeg", alt="Grupo MEGÒC")
+            .carousel__item: img(src="../img/img3.jpg", alt="Grupo MEGÒC")
+            .carousel__item: img(src="../img/img1.jpg", alt="Grupo MEGÒC")
+        .carousel__link: a(href="galeria.html") Ver más 
+      
+      article.origen-coro
+        .content
+          h3 Origen del coro
+          p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, praesentium expedita. Ipsa aliquam, debitis est possimus quam harum, suscipit nesciunt ea sapiente ut quod, quaerat quo nemo itaque numquam obcaecati?
+        .img: img(src="../img/articulo_diario.jpg", alt="Articulo noticia MEGÒC")
+       
+    // footer
+    include includes/footer.pug
+
+    // cookies
+    include includes/cookies.pug

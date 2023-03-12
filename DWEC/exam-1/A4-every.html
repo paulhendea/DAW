@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Every</title>
+</head>
+
+<body>
+
+  <script>
+    const NUMBERS = [10, 2, 3, 40, 33, 50]
+    const multipleOf10 = x => x % 10 === 0
+    const isPositive = x => x >= 0
+
+    // show results
+    console.log(`The numbers are multiple of 10: ${every(NUMBERS, multipleOf10)}`)
+    console.log(`The numbers are positive: ${every(NUMBERS, isPositive)}`)
+
+    function every(array, callback) {
+      // for every item in the array use the callback function
+      for (let i = 0; i < array.length; i++) {
+        // if the response if false return and exit
+        if (!callback(array[i])) {
+          return false
+        }
+      }
+      // if everything went ok return true
+      return true
+    }
+  </script>
+
+</body>
+
+</html>

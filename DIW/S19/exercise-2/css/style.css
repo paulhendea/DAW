@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/******************/
+/* MOBILE VERSION */
+/******************/
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+header {
+  padding: 1rem;
+  background-color: green;
+}
+
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: red;
+}
+nav ul {
+  padding-left: 1rem;
+}
+
+main section#news, 
+main section#articles {
+  margin  : 0.2rem;
+  display: grid;
+  grid-template: auto / auto;
+  gap: 0.2rem;
+}
+main section#news article {
+  padding: 1rem;
+  background-color: lightblue;
+}
+main section#articles article {
+  padding: 1rem;
+  background-color: blue;
+}
+main section#notes {
+  display: none;
+  padding: 1rem;
+  background-color: lightgreen;
+}
+main section#banners {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: orange;
+}
+main section#banners ul {
+  padding-left: 2rem;
+}
+
+/******************/
+/* TABLET VERSION */
+/******************/
+
+@media(min-width: 768px) {
+
+  main section#news {
+    grid-template:  auto / repeat(2, 50%);
+  }
+  main section#news article:first-child {
+    grid-column: 1 / span 2;
+  }
+  main section#articles {
+    grid-template: auto / repeat(3, auto);
+  }
+  main section#notes {
+    display: block;
+  }
+  main section#banners ul {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 3rem;
+  }
+  
+}
+
+/**************/
+/* PC VERSION */
+/**************/
+
+@media(min-width: 1024px) {
+
+  main {
+    display: grid;
+    grid-template: repeat(3, auto) / repeat(2, auto);
+    gap: 0.2rem;
+  }
+  main section#banners {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 3;
+    width: 12rem;
+  }
+  main section#banners ul {
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+  }
+  main section#articles {
+    grid-template: auto / repeat(2, 50%);
+  }
+  main section#articles article:last-child {
+    grid-column: 1 / span 2;
+  }
+  main section#notes {
+    margin-right: -0.2rem;
+  }
+  
+}

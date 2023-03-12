@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 1</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    main section#paragraphs {
+      width: 100%;
+    }
+    main ol {
+      padding-left: 2rem;
+    }
+  </style>
+  
+  <!-- JS -->
+  <script src="../js/activity1.js" defer></script>
+  
+</head>
+<body>
+
+  <header>
+    <h1>Adding paragraphs 📄</h1>
+  </header>
+
+  <main>
+    <section id="paragraphs">
+      <ol>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, nostrum non deleniti vero tenetur repudiandae? Tenetur, atque animi. Ullam, mollitia harum. Porro dignissimos quos, repudiandae fugit dolorem explicabo blanditiis ipsa?</li>
+        <li>Voluptatem ipsam quis magni aut voluptatum repudiandae ratione eligendi eum. Accusantium quo, perspiciatis eaque doloremque temporibus nam consequatur iure! Doloremque ipsum, a quo deserunt impedit illo odit vel quae amet?</li>
+        <li>Fugiat soluta quos, maxime, enim inventore quis quo distinctio, voluptatibus neque consectetur animi sed totam. Aut totam corrupti magnam architecto. Inventore debitis delectus consectetur quae nihil, eveniet natus. Eos, maiores!</li>
+        <li>Doloremque asperiores molestias eaque obcaecati. Distinctio quis laboriosam voluptas odio sit, quos ex minus officia autem rerum illum, sint nulla ratione id soluta unde totam, quae eum quia labore error.</li>
+        <li>Natus, corporis ab. Corrupti tempore perspiciatis officia atque fugiat, eaque neque alias blanditiis dolorem temporibus dolor vel autem, praesentium similique, aspernatur rerum recusandae totam voluptates? Error assumenda impedit mollitia exercitationem?</li>
+        <li>Voluptatibus placeat quas ad harum, magnam ab saepe nesciunt officiis ipsum quo tempore, iste ipsam architecto rerum voluptates sed, maiores error illo asperiores eius explicabo non. Laboriosam cum nesciunt deserunt?</li>
+        <li>Saepe sit voluptates architecto itaque nulla? Cum obcaecati quaerat non, harum rerum minima aperiam molestias ratione voluptate, nemo ipsum? Tempore placeat eum voluptas quaerat voluptatem impedit obcaecati? Architecto, officia sunt!</li>
+        <li>Aliquid distinctio at non quisquam error, alias facilis quis, est culpa pariatur blanditiis vitae mollitia id voluptatum? Nulla maxime illo, officia rerum explicabo itaque consequuntur eius ipsum eaque ex! Magnam.</li>
+        <li>Minima rem nostrum possimus iure facilis culpa voluptatum, doloremque molestias ex! Magni doloremque aliquam soluta ipsam qui rerum hic modi, ducimus exercitationem sequi. Exercitationem officia similique alias maxime excepturi? Eveniet?</li>
+      </ol>
+    </section>
+
+    <section id="input">
+      <label for="text">Text: </label>
+      <input type="text" id="text" name="text">
+      <label for="position">Position</label>
+      <input type="number" id="position" name="position" min="1">
+      <button onclick="addParagraph()">Add</button>
+      <p id="response"></p>
+    </section>
+  </main>
+  
+</body>
+</html>

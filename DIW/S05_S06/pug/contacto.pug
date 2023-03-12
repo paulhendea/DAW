@@ -1,0 +1,76 @@
+-var sugerencias = ['anuncions de televisión', 'buscadores', 'un amigo']
+-var tiposCafe = ['Arábica', 'Robusta', 'Caracolillo']
+-var preparaciones = ['Solo', 'Cortado', 'Con leche', 'Americano']
+
+html(lang="es")
+  head
+    include includes/head-meta.pug
+    title Café.net Club
+
+    // CSS
+    link(rel="stylesheet", href="../css/style.css")
+    link(rel="stylesheet", href="../css/contacto.css")
+
+  body
+    header
+      h1 Contacto
+      hr
+
+    main
+      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem praesentium culpa hic reprehenderit sed tempora velit, enim deserunt illo totam consequatur quam! Perspiciatis rem nostrum aperiam veniam dignissimos quo eligendi.
+      form(method="GET", action="script.php")
+        p
+          label(for="nombre", class="required") Nombre*: 
+          input(type="text", id="nombre", name="nombre", maxlength="20", required, autofocus) 
+        p
+          label(for="apellidos") Apellidos: 
+          input(type="text", id="apellidos", name="apellidos", maxlength="20") 
+        p
+          label(for="edad") Edad: 
+          input(type="number", id="edad", name="edad", min="18", max="99")
+        p
+          label(for="email", class="required") Correo Electrónico*: 
+          input(type="email", id="email", name="email", pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$", required) 
+        p
+          label(for="colorFavorito") ¿Cuál es tu color favorito?
+          input(type="color", id="colorFavorito", name="colorFavorito") 
+        p
+          label(for="suavidad") ¿Te gusta suave o fuerte?
+          input(type="range", id="suavidad", name="suavidad", min="1", max="3") 
+        p
+         label(for="cafeInput") ¿Cuántas tazas de café tomas al día?
+         div(id="cafeInput") 
+          input(type="radio", id="pocoCafe", name="cafe", checked)
+          label(for="pocoCafe") 1 o 2 tazas 
+          input(type="radio", id="medioCafe", name="cafe") 
+          label(for="medioCafe") 2-5 tazas 
+          input(type="radio", id="muchoCafe", name="cafe") 
+          label(for="muchoCafe") Más de 5 tazas 
+        p
+          label(for="preparacion") ¿Cómo te gusta preparar el café?
+          br
+          select(id="preparacion", name="preparacion") 
+            option(selected disabled) Formas de preparar café
+              each preparacion in preparaciones
+                option #{preparacion}
+        p
+          label(for="gustos") ¿Qué café te gusta más?
+          br
+          select(id="gustos", name="gustos" multiple size="3")
+            each tipoCafe in tiposCafe
+              option #{tipoCafe}
+        p
+          label(for="encontrado") ¿Cómo nos has encontrado?
+          br
+          input(type="text" list="sugerencias", maxlength="20") 
+          datalist(id="sugerencias")
+            each sugerencia in sugerencias
+              option(value=sugerencia)
+        p
+          label(for="comentario") Comentario: 
+          br
+          textarea(id="comentario", name="comentario", rows="5", cols="30", maxlength="500") 
+        p(class="required") (Los campos con asterisco (*) son obligatorios)
+        p
+          input(type="submit", value="Enviar")
+          input(type="reset", value="Borrar")

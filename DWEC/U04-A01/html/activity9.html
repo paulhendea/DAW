@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 9</title>
+
+    <!-- CSS -->
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        article {
+            margin: 10px;
+            padding: 10px;
+            width: fit-content;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 10%;
+        }
+        ul {
+            padding: 0px;
+            width: fit-content;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+        }
+        ul li {
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 10%;
+        }
+    </style>
+    
+    <!-- JS -->
+    <script src="../js/activity9.js" async defer></script>
+</head>
+<body>
+
+    <main>
+        <header><h1>Group generator</h1></header>
+        <p>Enter students and the program will group them for you :)</p>
+        <section>
+            <p><input type="text" id="student" autofocus></p>
+            <button onclick="addStudent()">Add student</button>
+        </section>
+        <section id="response">
+        </section>
+    </main>
+    
+</body>
+</html>

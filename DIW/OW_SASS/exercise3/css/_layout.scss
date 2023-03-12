@@ -1,0 +1,15 @@
+/// @group table
+$element-count: 8;
+
+/// Loop that generates classes of different sizes
+@for $i from 1 through $element-count {
+  .row > .col-#{$i} {
+    padding: 1rem;
+    width: #{col-width($i)} + '%';
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}

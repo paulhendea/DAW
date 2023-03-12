@@ -1,0 +1,97 @@
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="robots" content="index, nofollow"/>
+    <meta name="theme-color" content="lightblue"/>
+    <meta name="author" content="Paul Hendea"/>
+    <title>Café.net Club</title>
+    <!-- CSS-->
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/contacto.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>Contacto</h1>
+      <hr/>
+    </header>
+    <main>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem praesentium culpa hic reprehenderit sed tempora velit, enim deserunt illo totam consequatur quam! Perspiciatis rem nostrum aperiam veniam dignissimos quo eligendi.</p>
+      <form method="GET" action="script.php">
+        <p>
+          <label class="required" for="nombre">Nombre*: </label>
+          <input type="text" id="nombre" name="nombre" maxlength="20" required="required" autofocus="autofocus"/>
+        </p>
+        <p>
+          <label for="apellidos">Apellidos: </label>
+          <input type="text" id="apellidos" name="apellidos" maxlength="20"/>
+        </p>
+        <p>
+          <label for="edad">Edad: </label>
+          <input type="number" id="edad" name="edad" min="18" max="99"/>
+        </p>
+        <p>
+          <label class="required" for="email">Correo Electrónico*: </label>
+          <input type="email" id="email" name="email" pattern="^w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$" required="required"/>
+        </p>
+        <p>
+          <label for="colorFavorito">¿Cuál es tu color favorito?</label>
+          <input type="color" id="colorFavorito" name="colorFavorito"/>
+        </p>
+        <p>
+          <label for="suavidad">¿Te gusta suave o fuerte?</label>
+          <input type="range" id="suavidad" name="suavidad" min="1" max="3"/>
+        </p>
+        <p>
+          <label for="cafeInput">¿Cuántas tazas de café tomas al día?</label>
+          <div id="cafeInput"> 
+            <input type="radio" id="pocoCafe" name="cafe" checked="checked"/>
+            <label for="pocoCafe">1 o 2 tazas </label>
+            <input type="radio" id="medioCafe" name="cafe"/>
+            <label for="medioCafe">2-5 tazas </label>
+            <input type="radio" id="muchoCafe" name="cafe"/>
+            <label for="muchoCafe">Más de 5 tazas </label>
+          </div>
+        </p>
+        <p>
+          <label for="preparacion">¿Cómo te gusta preparar el café?</label><br/>
+          <select id="preparacion" name="preparacion"> 
+            <option selected="selected" disabled="disabled">Formas de preparar café
+              <option>Solo</option>
+              <option>Cortado</option>
+              <option>Con leche</option>
+              <option>Americano</option>
+            </option>
+          </select>
+        </p>
+        <p>
+          <label for="gustos">¿Qué café te gusta más?</label><br/>
+          <select id="gustos" name="gustos" multiple="multiple" size="3">
+            <option>Arábica</option>
+            <option>Robusta</option>
+            <option>Caracolillo</option>
+          </select>
+        </p>
+        <p>
+          <label for="encontrado">¿Cómo nos has encontrado?</label><br/>
+          <input type="text" list="sugerencias" maxlength="20"/>
+          <datalist id="sugerencias">
+            <option value="anuncions de televisión"></option>
+            <option value="buscadores"></option>
+            <option value="un amigo"></option>
+          </datalist>
+        </p>
+        <p>
+          <label for="comentario">Comentario: </label><br/>
+          <textarea id="comentario" name="comentario" rows="5" cols="30" maxlength="500"> </textarea>
+        </p>
+        <p class="required">(Los campos con asterisco (*) son obligatorios)</p>
+        <p>
+          <input type="submit" value="Enviar"/>
+          <input type="reset" value="Borrar"/>
+        </p>
+      </form>
+    </main>
+  </body>
+</html>

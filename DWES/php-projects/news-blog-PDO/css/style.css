@@ -1,0 +1,39 @@
+/* Fonts */
+@font-face {
+  font-family: FiraCode;
+  src: url('../font/FiraCode-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: FiraCode;
+  src: url('../font/FiraCode-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: FiraCode;
+  src: url('../font/FiraCode-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Initialization */
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: FiraCode;
+  font-size: 16px;
+}
+
+header {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}

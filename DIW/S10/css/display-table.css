@@ -1,0 +1,19 @@
+main div.container {
+  display: table;
+  width: 100%;
+}
+main div.container nav#nav2, 
+main div.container article {
+  display: table-cell;
+}
+main div.container nav#nav2 {
+  width: 20%;
+}
+main div.container article {
+  width: 80%;
+}
+
+main div.container article div {
+  display: table-cell;
+  vertical-align: top;
+}

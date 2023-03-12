@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 5</title>
+
+  <!-- JS -->
+  <script src="../js/activity5.js" async defer></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    section#input p {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    section#response {
+      margin-top: 1em;
+      width: fit-content;
+    }
+    section#response ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      list-style-type: none;
+    }
+    section#response li {
+      margin: 0.5em;
+      padding: 1em;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+    section#response progress {
+      margin-left: 0.5em;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <header>
+    <h1 class="center">Array of words to map</h1>
+  </header>
+
+  <main>
+    <section id="input">
+      <p>
+        <label for="text"></label>
+        <input type="text" id="text" name="text">
+      </p>
+      <p>
+        <button onclick="addWord()">Send</button>
+        <button onclick="printStats()">Print Stats</button>
+      </p>
+    </section>
+
+    <section id="response"></section>
+    
+  </main>
+  
+</body>
+</html>

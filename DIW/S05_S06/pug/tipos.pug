@@ -1,0 +1,43 @@
+html(lang="es")
+  head
+    include includes/head-meta.pug
+    title Café.net Club
+
+    // CSS
+    link(rel="stylesheet", href="../css/style.css")
+    link(rel="stylesheet", href="../css/tipos.css")
+
+  body
+    main
+      h1 Tipos de Café
+      hr
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi pariatur fugit, ullam accusantium facere similique voluptates consectetur. Officia doloribus reiciendis id aperiam voluptas, optio amet rerum. Non vero explicabo aperiam!
+      p Lorem, ipsum dolor sit amet consectetur adipisicing elit: 
+      div(class="container")
+        ul 
+          li: a(href="#arabica-lavado") Café Arábica Lavado 
+          li: a(href="#arabica-no-lavado") Café Arábica No Lavado 
+          li: a(href="#robusta") Café Robusta 
+          li: a(href="#caracolillo") Café Caracolillo 
+        
+        p: img(src="../img/granos.jpg", alt="granos")
+      
+      hr
+      h2(id="arabica-lavado") Café Arábica Lavado 
+      p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, repellat et. Consequatur dolore sapiente dolores vitae quibusdam? Consectetur cumque iure ratione nam autem. Ducimus nesciunt consequatur quisquam dolorum ratione dolore.
+      a(href="#") Volver arriba  
+      hr
+
+      h2(id="arabica-no-lavado") Café Arábica No Lavado 
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi harum nihil, ullam suscipit culpa quam officiis minima fugiat, eaque ipsum quo? Perferendis, eum minus in repellat mollitia praesentium inventore doloribus.
+      a(href="#") Volver arriba 
+      hr
+
+      h2(id="robusta") Café Robusta 
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam rem iusto expedita consequatur quibusdam. Corporis, ipsum? Explicabo est fuga, eum quos sunt totam aut deserunt ab architecto ipsam, tempore voluptatum?
+      a(href="#") Volver arriba 
+      hr
+
+      h2(id="caracolillo") Café Caracolillo 
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde obcaecati, aliquid facere error voluptate quisquam cupiditate excepturi. Modi repudiandae dolor tempora, quisquam, magni voluptatibus nobis sit aut sint, facilis neque!
+      a(href="#") Volver arriba 

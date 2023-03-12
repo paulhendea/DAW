@@ -1,0 +1,32 @@
+// container
+$main-container-width: 80%;
+.container {
+  width: $main-container-width;
+  margin: 0 auto;
+}
+
+// navbar
+nav {
+  background-color: $navbar-background-color;
+  padding: 0.2rem;
+
+  ul {
+    li {
+      display: inline-block;
+      padding-inline: 1rem;
+
+      &:active {
+        color: $navbar-color-hover;
+        font-weight: bold;
+      }
+
+      &:hover {
+        color: $navbar-color-hover;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

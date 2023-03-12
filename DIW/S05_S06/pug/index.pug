@@ -1,0 +1,28 @@
+doctype html
+html(lang="es")
+  head
+    include includes/head-meta.pug
+    title Café.net Club
+
+    // CSS
+    link(rel="stylesheet", href="../css/style.css")
+    link(rel="stylesheet", href="../css/index.css")
+
+  body
+    header
+      img(id="logo", src="../img/logo.gif", alt="logo")
+      img(id="banner", src="../img/banner.gif", alt="banner")
+  
+    div(class="container")
+      nav
+        ul
+          li: a(href="historia.html" target="marcoPrincipal") Historia 
+          li: a(href="cultivo.html" target="marcoPrincipal") Cultivo  
+          li: a(href="tipos.html" target="marcoPrincipal") Tipos 
+          li: a(href="preparacion.html" target="marcoPrincipal") Preparación 
+          li: a(href="contacto.html" target="marcoPrincipal") Contacto 
+          li: img(id="grano", src="../img/grano.gif", alt="grano")
+        p: img(src="../img/fotos.png", alt="fotos café")
+
+      main
+        iframe(name="marcoPrincipal", src="historia.html", frameborder="0") 

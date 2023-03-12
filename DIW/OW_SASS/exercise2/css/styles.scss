@@ -1,0 +1,91 @@
+$color-error: red;
+$color-warning: orange;
+$color-accepted: green;
+$color-normal: blue;
+$color-shadow: #aaa;
+
+$border-radius: 0.4rem;
+
+$button-colors: (
+  'error': $color-error,
+  'warning': $color-warning,
+  'accepted': $color-accepted,
+  'normal': $color-normal,
+);
+
+// buttons
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: $border-radius;
+  padding: 0.5rem;
+
+  &:hover {
+    box-shadow: calc($border-radius / 2) calc($border-radius / 2) $color-shadow;
+  }
+
+  &:active {
+    background-color: $color-warning;
+    color: white;
+  }
+}
+
+@each $key, $value in $button-colors {
+  .btn-#{$key} {
+    background-color: $value;
+  }
+}
+
+// table
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+// column color function
+$color-col-even: #ccc;
+$color-col-odd: #888;
+@function col-color($col-num) {
+  @if ($col-num % 2 == 0) {
+    @return $color-col-even;
+  } @else {
+    @return $color-col-odd;
+  }
+}
+
+$start: 1;
+$end: 10;
+@for $num from $start to $end {
+  tbody tr td:nth-child(#{$num}) {
+    background-color: col-color($num);
+  }
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+
+  * {
+    border: 1px solid black;
+    height: 150px;
+  }
+}
+
+// column width function
+$element-count: 8;
+@function col-width($col-num) {
+  @return calc(100 / $element-count) * $col-num;
+}
+
+@for $i from 1 through $element-count {
+  .row > .col-#{$i} {
+    padding: 1rem;
+    width: #{col-width($i)} + "%";
+  }
+} 

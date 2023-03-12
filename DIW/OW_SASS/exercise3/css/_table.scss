@@ -1,0 +1,17 @@
+// table
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+/// Loop to give different colors to even and odd columns
+@for $num from 1 to 10 {
+  tbody tr td:nth-child(#{$num}) {
+    background-color: col-color($num);
+  }
+}

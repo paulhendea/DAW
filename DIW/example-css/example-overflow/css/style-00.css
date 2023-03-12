@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+:root {
+  font-family: 'Arial', 'Verdana', sans-serif;
+  font-size: 16px;
+}
+
+header h1,
+header h2 {
+  display: inline-block;
+}
+
+main div {
+  height: 2rem;
+  border: 1px solid red;
+  margin-bottom: 2rem;
+}
+
+main div#d0 {
+  overflow: hidden;
+}
+
+main div#d1 {
+  overflow: scroll;
+}
+
+main div#d2 {
+  overflow: auto;
+}
+
+main div#d3 {
+  overflow: visible;
+}

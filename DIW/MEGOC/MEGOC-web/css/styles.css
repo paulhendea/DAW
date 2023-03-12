@@ -1,0 +1,277 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Nunito:wght@400;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+
+  --black: #000;
+  --dark-gray: #2E2E2E;
+  --white: #fff;
+  --silver: #E6E6E6;
+  --gold: #FFE15D;
+
+  background-color: var(--black);
+}
+
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  position: relative;
+  background-color: var(--silver);
+  border-radius: 0 0 2rem 2rem;
+  z-index: 2;
+}
+
+nav #logo,
+nav #hamburger {
+  width: 50px;
+  height: 50px;
+}
+nav #logo img {
+  width: 100%;
+}
+nav #nav-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+nav #nav-buttons #hamburger {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: space-around;
+}
+nav #nav-buttons #hamburger .line {
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--black);
+  border-radius: 0.2rem;
+  transition: 0.5s ease;
+}
+
+nav #nav-buttons #hamburger.open .line {
+  position: absolute;
+  top: 50%;
+}
+nav #nav-buttons #hamburger.open .line:nth-child(2) {
+  background-color: transparent;
+}
+nav #nav-buttons #hamburger.open .line:nth-child(1) {
+  transform: rotateZ(45deg) scale(1.25);
+}
+nav #nav-buttons #hamburger.open .line:nth-child(3) {
+  transform: rotateZ(-45deg) scale(1.25);
+}
+
+menu#menu {
+  display: block;
+  position: absolute;
+  top: -300px;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  list-style-type: none;
+  background-color: var(--silver);
+  border-radius: 0 0 2rem 2rem;
+  transition: 0.5s ease;
+  z-index: 1;
+}
+menu#menu.open {
+  top: calc(1.5rem + 45px);
+}
+menu#menu ul {
+  margin-block: 1.5rem;
+  list-style-type: none;
+}
+menu#menu ul li a {
+  display: block;
+  margin-block-end: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+/* For when the #lang-social-buttons are in #menu-buttons */
+menu#menu #menu-buttons #lang-social-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-block-start: 2rem;
+}
+menu#menu #menu-buttons #lang-social-buttons #languages,
+menu#menu #menu-buttons #lang-social-buttons #social-media {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+menu#menu #menu-buttons #lang-social-buttons #languages .separator {
+  display: inline-block;
+  width: 0.2rem;
+  height: 80%;
+  background-color: var(--black);
+  border-radius: 0.5rem;
+}
+menu#menu #menu-buttons #lang-social-buttons #languages a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+menu#menu #menu-buttons #lang-social-buttons #social-media span {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+/* For when the #lang-social-buttons are in #nav-buttons */
+nav #nav-buttons #lang-social-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+nav #nav-buttons #lang-social-buttons #languages,
+nav #nav-buttons #lang-social-buttons #social-media {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1rem;
+  margin-inline-end: 2.5rem;
+}
+nav #nav-buttons #lang-social-buttons #languages .separator {
+  display: inline-block;
+  width: 0.2rem;
+  height: 80%;
+  background-color: var(--black);
+  border-radius: 0.5rem;
+}
+nav #nav-buttons #lang-social-buttons #languages a {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: var(--black);
+}
+nav #nav-buttons #lang-social-buttons #social-media span {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+main {
+  min-height: 90vh;
+}
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  background-color: var(--dark-gray);
+  border-radius: 2rem 2rem 0 0;
+}
+footer article {
+  color: var(--silver);
+  text-align: center;
+}
+footer article h3 {
+  margin-block-end: 0.5rem;
+  text-transform: uppercase;
+}
+footer article a {
+  display: block;
+  color: var(--silver)
+}
+
+#cookies-banner {
+  display: none;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--black);
+}
+#cookies-banner p {
+  color: var(--white);
+}
+#cookies-banner a {
+  color: var(--white);
+  border-bottom: 2px solid var(--gold);
+}
+#cookies-banner a:hover {
+  color: var(--gold);
+}
+
+#cookies-banner .buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+}
+#cookies-banner .buttons button {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--black);
+  background-color: var(--silver);
+  border: none;
+  border-radius: 0.5rem;
+}
+
+
+/******************/
+/* TABLET VERSION */
+/******************/
+
+@media(min-width: 768px) {
+
+  menu#menu {
+    display: block;
+    position: absolute;
+    top: -250px;
+    left: auto;
+    right: 0;
+    width: fit-content;
+    padding: 1.5rem;
+    list-style-type: none;
+    background-color: var(--silver);
+    transition: 0.5s ease;
+    text-align: right;
+  }
+  menu#menu ul li a {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  footer {
+    flex-flow: row wrap;
+    align-items: baseline;
+  }
+  footer article {
+    text-align: left;
+  }
+
+  #cookies-banner {
+    flex-flow: row nowrap;
+  }
+  
+}

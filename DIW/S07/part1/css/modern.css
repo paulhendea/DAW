@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=Source+Code+Pro&display=swap');
+
+:root {
+  font-family: 'Source Code Pro', monospace;
+
+  background-image: url(../../img/modern-background-pattern.webp);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+nav {
+  background: rgb(63,94,251);
+  background: linear-gradient(315deg, rgba(63,94,251,0.9) 0%, rgba(252,70,107,0.9) 100%);
+}
+nav ul li a {
+  display: block;
+  padding: 0.2rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid black;
+}
+nav ul li a:link {
+  color: white;
+}
+nav ul li a:visited {
+  color: white;
+}
+nav ul li a:hover {
+  color: black;
+}
+nav ul li:has(button#styleButton) {
+  background: rgba(252,70,107,0.75);
+  border-radius: 10px;
+} 
+nav ul li button#styleButton {
+  padding: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+  border: 1px solid rgba(0,0,0,0.5);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+}
+nav ul li button#styleButton:hover {
+  box-shadow: none;
+}
+nav hr {
+  display: none;
+}
+
+header#header, 
+main section, 
+aside {
+  color: white;
+  background-color: black;
+  border-radius: 2rem;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+}
+
+header#header h1 {
+  font-family: 'Silkscreen', cursive;
+  font-size: 4rem;
+  font-weight: normal;
+}
+header#header div img {
+  border-radius: 2rem;
+}
+
+main section article {
+  margin-bottom: 2rem;
+}
+main section article header {
+  margin-bottom: 1rem;
+}
+main section#skills article#technologies ul.cards li {
+  filter: drop-shadow(10px 10px 2px rgba(255,255,255,0.25));
+}
+main section#skills article#languages ul progress {
+  accent-color: yellow;
+}
+main section#skills article#languages ul progress[value="80"], 
+main section#skills article#languages ul progress[value="90"], 
+main section#skills article#languages ul progress[value="100"] {
+  accent-color: lime;
+}
+
+main section#experience table, 
+main section#experience table th, 
+main section#experience table td {
+  padding-inline-end: 1.5rem;
+}
+
+main section > a:last-child, 
+aside > a:last-child, 
+footer > a:last-child {
+  padding: 0.5rem;
+  border-bottom: 2px solid white;
+}
+main section > a:last-child img, 
+aside > a:last-child img, 
+footer > a:last-child img {
+  filter: invert(100%);
+}
+main section > a:last-child:link, 
+aside > a:last-child:link, 
+footer > a:last-child:link {
+  color: white;
+}
+main section > a:last-child:visited, 
+aside > a:last-child:visited, 
+footer > a:last-child:visited {
+  color: white;
+}
+main section > a:last-child:hover, 
+aside > a:last-child:hover, 
+footer > a:last-child:hover {
+  background-color: white;
+  color: black;
+}
+main section > a:last-child:hover img, 
+aside > a:last-child:hover img, 
+footer > a:last-child:hover img {
+  filter: none;
+}
+main section#education table {
+  background: linear-gradient(315deg, rgba(63,94,251,0.25) 0%, rgba(252,70,107,0.25) 100%);
+}
+main section#education table,
+main section#education table th,
+main section#education table td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+main section#education table a {
+  color: white;
+}
+
+aside ol li:nth-child(even) {
+  text-decoration: underline;
+}
+
+footer {
+  background: rgb(63,94,251);
+  background: linear-gradient(315deg, rgba(63,94,251,0.9) 0%, rgba(252,70,107,0.9) 100%);
+}
+footer ul img + a {
+  color: white;
+  text-decoration: underline;
+  padding-left: 1rem;
+}

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+  <head>
+	<title>Ejemplo Form maquetado con CSS</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="css/style.css">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+		
+		/*TO DO*/ 
+			
+	</style>
+  </head>
+  <body>
+    <main>
+	  <form>	<!--TO DO -->
+    <!-- el enctype importante si usamos input type="file"-->
+
+	    <fieldset>
+		  <legend>Datos personales</legend>
+		  <!-- 1a linea -->
+		  <p>
+			<label for="nom">Nombre</label>
+			<input type="text" name="nombre" id="nom"  /> <!--TO DO -->
+		  </p>
+		  <!-- 2a linea -->
+		  <p>
+			<label for="pwd">Password</label>
+			<input type="password" name="pwd" id="pwd" />
+		  </p>	
+		  <!-- 3a linea -->
+		  <p>	
+			<label>Sexo:</label>
+				<span><input type="radio" name="sexo" id="home" /><!--TO DO -->
+					 <label for="home">Hombre</label>&nbsp;&nbsp;
+					 <input type="radio" name="sexo" id="dona"/>
+					 <label for="dona">Mujer</label> 
+				</span>
+		  </p>	
+		  <!-- 4a linea -->
+		  <p>	
+			<label>Carnet conducir:</label>
+				<span><input type="checkbox" name="carnet[]" id="cA"/>
+					 <label for="cA"> A </label>
+					 <input type="checkbox" name="carnet[]" id="cB"/>
+					 <label for="cB"> B </label>
+				</span>
+		  </p>
+		  <!-- 5a linea -->
+		  <p>	
+			<label for="foto">Foto</label>
+			<!--TO DO -->
+		  </p>
+		  <!-- 6a linea -->
+		  <p>
+			<label for="info">Otra información</label>
+			<textarea name="info" id="info" cols="70" rows="7"></textarea> 
+				<!--entre etiqueta de apertura y cerrado no poner nada que no se desee-->
+		  </p>
+		  <!-- 7a linea -->
+		  <p>	
+			<span></span>
+			<input type="button" value="Enviar"/>
+			<input type="reset" value="Borrar"/>
+		  </p>			
+	    </fieldset>	
+	  </form>	
+    </main>
+  </body>
+</html>

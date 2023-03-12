@@ -1,0 +1,19 @@
+/// Column width function
+/// @parameter { integer } $col-num Number of the column
+/// @return { integer } Width
+/// @group table
+@function col-width($col-num) {
+  @return calc(100 / $element-count) * $col-num;
+}
+
+/// Column color function
+/// @parameter { integer } $col-num Number of the column
+/// @return { color }
+/// @group table
+@function col-color($col-num) {
+  @if ($col-num % 2 == 0) {
+    @return $color-col-even;
+  } @else {
+    @return $color-col-odd;
+  }
+}

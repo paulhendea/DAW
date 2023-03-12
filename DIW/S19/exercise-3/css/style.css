@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/******************/
+/* MOBILE VERSION */
+/******************/
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+
+header,
+footer {
+  padding: 1rem;
+  background-color: lightgreen;
+}
+
+main {
+  display: grid;
+  gap: 0.2rem;
+  margin-block: 0.2rem;
+}
+main section#numbers,
+main section#letters {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  gap: 0.2rem;
+}
+main section#numbers article {
+  padding: 1rem;
+  background-color: lightgray;
+}
+main section#letters article {
+  padding: 1rem;
+  background-color: darkgray;
+}
+main section#device {
+  padding: 1rem;
+  background-color: lightblue;
+}
+main section#device::before {
+  content: "Mobile";
+}
+main section#emotions article {
+  padding: 1rem;
+  background-color: orange;
+}
+main section#emotions article:first-child {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+/******************/
+/* TABLET VERSION */
+/******************/
+
+@media(min-width: 768px) {
+
+  main {
+    grid-template-areas: 
+    "..."
+    "device"
+    "..."
+    "...";
+  }
+  main section#device {
+    grid-area: device;
+  }
+  main section#device::before {
+    content: "Tablet";
+  }
+  main section#numbers,
+  main section#letters {
+    grid-template: auto / repeat(4, auto);
+  }
+  main section#emotions {
+    display: grid;
+    grid-template: auto / repeat(2, auto);
+    gap: 0.2rem;
+  }
+  main section#emotions article:first-child {
+    display: block;
+  }
+
+  footer {
+    display: block;
+  }
+  
+}
+
+/**************/
+/* PC VERSION */
+/**************/
+
+@media(min-width: 1024px) {
+
+  main {
+    grid-template-areas: 
+    "..."
+    "..."
+    "device"
+    "...";
+  }
+  main section#device::before {
+    content: "Desktop";
+  }
+  main section#numbers {
+    grid-template-areas: 
+    "... number1 number2 ..."
+    "number3 ... ... number4";
+  }
+  main section#numbers article:nth-child(1) {
+    grid-area: number1;
+  }
+  main section#numbers article:nth-child(2) {
+    grid-area: number2;
+  }
+  main section#numbers article:nth-child(3) {
+    grid-area: number3;
+  }
+  main section#numbers article:nth-child(4) {
+    grid-area: number4;
+  }
+  main section#letters article:first-child {
+    order: 1;
+  }
+  main section#emotions {
+    display: grid;
+    grid-template: auto / repeat(4, auto);
+  }
+  main section#emotions article:first-child {
+    grid-column: 2;
+  }
+  
+  
+}

@@ -1,0 +1,16 @@
+<%- include('cabecera'); %>
+<h1>Ficha de tarea</h1>
+
+<% if (tarea === null) { %>
+  <p>Tarea incorrecta :(</p>
+<% } else { %>
+  <article class="ficha-tarea">
+    <h2><%= tarea.titulo %></h2>
+    <ul>
+      <li><%= new Date(tarea.fecha).toLocaleDateString('es') %></li>
+      <li><%= prioridades[tarea.prioridad] %></li>
+    </ul>
+  </article>
+<% } %>
+
+<%- include('pie'); %>

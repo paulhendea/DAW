@@ -1,0 +1,38 @@
+doctype html
+html(lang="es")
+  header
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title MEGÒC
+
+    // CSS
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css", integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="../css/styles.css")
+    link(rel="stylesheet", href="../css/contacto.css")
+
+    // JS
+    script(src="../js/main.js", defer)
+  
+  body
+    // nav
+    include includes/navbar.pug
+
+    main
+      section.contact
+        .content
+          h3 Contacta con nosotros
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, veniam. Maiores nisi vitae perferendis quaerat consectetur, delectus quasi, magnam praesentium culpa cum, voluptate quod! Dignissimos.
+        
+        form(method="POST", action="#") 
+          input(type="text", name="name", placeholder="Tu nombre", required, autofocus)
+          input(type="email", name="email", placeholder="Tu correo electrónico", required)
+          textarea(name="message", cols="30", rows="1", placeholder="Tu mensaje")
+          button(type="submit") Enviar
+
+    
+    // footer
+    include includes/footer.pug
+
+    // cookies
+    include includes/cookies.pug

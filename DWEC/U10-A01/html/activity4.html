@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 4</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            color: #999999;
+        }
+
+        button {
+            padding: .5em;
+            border: none;
+            outline: none;
+            background-color: rgb(71, 114, 163);
+            color: white;
+            width: 250px;
+
+        }
+
+        td {
+            text-align: right;
+        }
+
+        form {
+            display: none;
+        }
+    </style>
+
+    <!-- JS -->
+    <script src="../js/activity4.js" defer></script>
+
+</head>
+
+<body>
+    <h1>Conversión de monedas</h1>
+    <p id="loading-text">loading...</p>
+    <form  id="form" action="#">
+        <table align="center">
+            <tr>
+                <td>
+                    <input id="amount" type="number" placeholder="Moneda base" size="4" style="text-align: right">
+                </td>
+                <td>
+                    <select name=moneda1 id=moneda1>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="moneda2">Convertir a..</label>
+                </td>
+                <td>
+                    <select name=moneda2 id=moneda2>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br><button id="convertButton">Convertir</button>
+        <p><strong>Resultado: </strong><span id="result">-</span></p>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  padding: 1rem;
+}
+
+form legend {
+  text-align: center;
+  font-family: 'tranquila', Arial, sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: darkblue;
+  letter-spacing: calc(1em / 10);
+}
+
+form fieldset {
+  margin: 2rem auto;
+  display: table;
+
+  border: 0.8rem ridge grey;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+form fieldset p {
+  display: table-row;
+}
+
+form fieldset p > * {
+  margin: 0.3rem 0;
+  padding: 0.2rem;
+  display: table-cell;
+}

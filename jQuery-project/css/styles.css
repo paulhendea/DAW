@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: chess;
+  src: url(../fonts/MERIFONT.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+
+header,
+main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-block-end: 1rem;
+}
+
+main table#board {
+  border-collapse: collapse;
+}
+
+main table#board td {
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  background-color: white;
+  border: 1px solid black;
+}
+
+main table#board tr:nth-child(odd) td:nth-child(even) {
+  background-color: lightgreen;
+}
+
+main table#board tr:nth-child(even) td:nth-child(odd) {
+  background-color: lightgreen;
+}
+
+.piece {
+  display: block;
+  font-family: chess;
+  font-size: 4rem;
+}
+
+.placeHolder {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+
+.squareHover {
+  outline: 2px solid black;
+}

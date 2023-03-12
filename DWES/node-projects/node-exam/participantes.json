@@ -1,0 +1,2 @@
+{"_id":{"$oid":"63c81dcd983579c00e67ead6"},"dorsal":1112,"nombre":"Paul","apellidos":"Hendea","fechaNacimiento":{"$date":"1999-09-09T00:00:00Z"},"__v":0}
+{"_id":{"$oid":"63c81ec397abb66375fb8f48"},"dorsal":1112,"nombre":"Manel","apellidos":"ASDf","fechaNacimiento":{"$date":"1999-09-09T00:00:00Z"},"__v":0}

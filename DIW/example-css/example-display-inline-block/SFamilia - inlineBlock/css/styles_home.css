@@ -1,0 +1,53 @@
+/*   Directives CSS  */
+@charset "utf-8";
+
+/* Aquí exclusivamente lo de la página HOME */
+/* Ojo: no hace falta poner inicializaciones, ya que
+en todas las páginas HTML cargaremos layout.css, y este
+ya las contiene */
+
+main article img{
+    float: left; /* float sigue siendo útil en estos casos */
+    margin: 1em;
+    opacity: 1;
+}
+
+main article p{
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+main article p:last-child{
+    clear: both;
+}
+/* texto sobre imagen */
+main article div#marco{
+    position:relative; /* sin top ni left, para que sea origen */
+    float: left; /* float sigue siendo útil en estos casos */
+    
+    opacity: 1;
+}
+
+main article div#marco p{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: red;
+}
+
+/* Banner Cookies */
+aside#cookies{
+    position:fixed;
+    left: 0; bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2em;
+}
+
+aside#cookies button{
+    margin: 1em;
+    padding: 0.5em;
+   
+}

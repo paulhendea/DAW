@@ -1,0 +1,7 @@
+mixin createDataList(name, ...list)
+    datalist(id=name)
+        each item in list 
+            option(value=item)
+
+mixin getIdLink(name) 
+    return "#" + name

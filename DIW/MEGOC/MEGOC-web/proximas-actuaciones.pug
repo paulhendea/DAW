@@ -1,0 +1,51 @@
+doctype html
+html(lang="es")
+  header
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title MEGÒC
+
+    // CSS
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css", integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="../css/styles.css")
+    link(rel="stylesheet", href="../css/proximas-actuaciones.css")
+
+    // JS
+    script(src="../js/calendar.js", defer) 
+    script(src="../js/main.js", defer)
+  
+  body
+    // nav
+    include includes/navbar.pug
+
+    main
+      article.calendar__container
+        h3 Próximas actuaciones
+        #calendar: img(src="../img/calendar.png", alt="Calendario")
+
+      section.events
+        article#2023-02-12.event
+          .content
+            h3.title Febrero 12, 2023
+            p.description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non soluta ab minima sequi libero beatae reprehenderit distinctio animi eos sint quis labore, deserunt exercitationem, porro reiciendis officia? Reprehenderit, quis neque.
+          .cartel: img(src="../img/cartel1.jpg", alt="Carte actuación MEGÒC")
+
+        article#2023-02-27.event
+          .content
+            h3.title Febrero 27, 2023
+            p.description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non soluta ab minima sequi libero beatae reprehenderit distinctio animi eos sint quis labore, deserunt exercitationem, porro reiciendis officia? Reprehenderit, quis neque.
+          .cartel: img(src="../img/cartel2.jpg", alt="Carte actuación MEGÒC")
+
+        article#2023-03-25.event
+          .content
+            h3.title Marzo 25, 2023
+            p.description Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non soluta ab minima sequi libero beatae reprehenderit distinctio animi eos sint quis labore, deserunt exercitationem, porro reiciendis officia? Reprehenderit, quis neque.
+          .cartel: img(src="../img/cartel3.jpg", alt="Carte actuación MEGÒC")
+     
+        
+    // footer
+    include includes/footer.pug
+
+    // cookies
+    include includes/cookies.pug

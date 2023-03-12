@@ -1,0 +1,13 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.especial {
+  margin: 2em;
+  color: darkred;
+  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
+}

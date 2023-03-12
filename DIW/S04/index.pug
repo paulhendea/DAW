@@ -1,0 +1,131 @@
+include includes/mixins.pug
+//- this data is just for example :) 
+-var countries = ["Hungary", "Belarus", "Austria", "Serbia", "Switzerland", "Germany", "Holy See", "Andorra", "Bulgaria", "United Kingdom", "France", "Montenegro", "Luxembourg", "Italy", "Denmark", "Finland", "Slovakia", "Norway", "Ireland", "Spain", "Malta", "Ukraine", "Croatia", "Moldova", "Monaco", "Liechtenstein", "Poland", "Iceland", "San Marino", "Albania", "Lithuania", "North Macedonia", "Slovenia", "Romania", "Latvia", "Netherlands", "Russia", "Estonia", "Belgium", "Czech Republic", "Greece", "Portugal", "Sweden"]
+-var cities = ["Aberdeen", "Abilene", "Akron", "Albany", "Albuquerque", "Alexandria", "Allentown", "Amarillo", "Anaheim", "Anchorage", "Ann Arbor", "Antioch", "Apple Valley", "Appleton", "Arlington", "Arvada", "Asheville", "Athens", "Atlanta", "Atlantic City", "Augusta", "Aurora", "Austin", "Bakersfield", "Baltimore", "Barnstable", "Baton Rouge", "Beaumont", "Bel Air", "Bellevue", "Berkeley", "Bethlehem", "Billings", "Birmingham", "Bloomington", "Boise", "Boise City", "Bonita Springs", "Boston", "Boulder", "Bradenton", "Bremerton", "Bridgeport", "Brighton", "Brownsville", "Bryan", "Buffalo", "Burbank", "Burlington", "Cambridge", "Canton", "Cape Coral", "Carrollton", "Cary", "Cathedral City", "Cedar Rapids", "Champaign", "Chandler", "Charleston", "Charlotte", "Chattanooga", "Chesapeake", "Chicago", "Chula Vista", "Cincinnati", "Clarke County", "Clarksville", "Clearwater", "Cleveland", "College Station", "Colorado Springs", "Columbia", "Columbus", "Concord", "Coral Springs", "Corona", "Corpus Christi", "Costa Mesa", "Dallas", "Daly City", "Danbury", "Davenport", "Davidson County", "Dayton", "Daytona Beach", "Deltona", "Denton", "Denver", "Des Moines", "Detroit", "Downey", "Duluth", "Durham", "El Monte", "El Paso", "Elizabeth", "Elk Grove", "Elkhart", "Erie", "Escondido", "Eugene", "Evansville", "Fairfield", "Fargo", "Fayetteville", "Fitchburg", "Flint", "Fontana", "Fort Collins", "Fort Lauderdale", "Fort Smith", "Fort Walton Beach", "Fort Wayne", "Fort Worth", "Frederick", "Fremont", "Fresno", "Fullerton", "Gainesville", "Garden Grove", "Garland", "Gastonia", "Gilbert", "Glendale", "Grand Prairie", "Grand Rapids", "Grayslake", "Green Bay", "GreenBay", "Greensboro", "Greenville", "Gulfport-Biloxi", "Hagerstown", "Hampton", "Harlingen", "Harrisburg", "Hartford", "Havre de Grace", "Hayward", "Hemet", "Henderson", "Hesperia", "Hialeah", "Hickory", "High Point", "Hollywood", "Honolulu", "Houma", "Houston", "Howell", "Huntington", "Huntington Beach", "Huntsville", "Independence", "Indianapolis", "Inglewood", "Irvine", "Irving", "Jackson", "Jacksonville", "Jefferson", "Jersey City", "Johnson City", "Joliet", "Kailua", "Kalamazoo", "Kaneohe", "Kansas City", "Kennewick", "Kenosha", "Killeen", "Kissimmee", "Knoxville", "Lacey", "Lafayette", "Lake Charles", "Lakeland", "Lakewood", "Lancaster", "Lansing", "Laredo", "Las Cruces", "Las Vegas", "Layton", "Leominster", "Lewisville", "Lexington", "Lincoln", "Little Rock", "Long Beach", "Lorain", "Los Angeles", "Louisville", "Lowell", "Lubbock", "Macon", "Madison", "Manchester", "Marina", "Marysville", "McAllen", "McHenry", "Medford", "Melbourne", "Memphis", "Merced", "Mesa", "Mesquite", "Miami", "Milwaukee", "Minneapolis", "Miramar", "Mission Viejo", "Mobile", "Modesto", "Monroe", "Monterey", "Montgomery", "Moreno Valley", "Murfreesboro", "Murrieta", "Muskegon", "Myrtle Beach", "Naperville", "Naples", "Nashua", "Nashville", "New Bedford", "New Haven", "New London", "New Orleans", "New York", "New York City", "Newark", "Newburgh", "Newport News", "Norfolk", "Normal", "Norman", "North Charleston", "North Las Vegas", "North Port", "Norwalk", "Norwich", "Oakland", "Ocala", "Oceanside", "Odessa", "Ogden", "Oklahoma City", "Olathe", "Olympia", "Omaha", "Ontario", "Orange", "Orem", "Orlando", "Overland Park", "Oxnard", "Palm Bay", "Palm Springs", "Palmdale", "Panama City", "Pasadena", "Paterson", "Pembroke Pines", "Pensacola", "Peoria", "Philadelphia", "Phoenix", "Pittsburgh", "Plano", "Pomona", "Pompano Beach", "Port Arthur", "Port Orange", "Port Saint Lucie", "Port St. Lucie", "Portland", "Portsmouth", "Poughkeepsie", "Providence", "Provo", "Pueblo", "Punta Gorda", "Racine", "Raleigh", "Rancho Cucamonga", "Reading", "Redding", "Reno", "Richland", "Richmond", "Richmond County", "Riverside", "Roanoke", "Rochester", "Rockford", "Roseville", "Round Lake Beach", "Sacramento", "Saginaw", "Saint Louis", "Saint Paul", "Saint Petersburg", "Salem", "Salinas", "Salt Lake City", "San Antonio", "San Bernardino", "San Buenaventura", "San Diego", "San Francisco", "San Jose", "Santa Ana", "Santa Barbara", "Santa Clara", "Santa Clarita", "Santa Cruz", "Santa Maria", "Santa Rosa", "Sarasota", "Savannah", "Scottsdale", "Scranton", "Seaside", "Seattle", "Sebastian", "Shreveport", "Simi Valley", "Sioux City", "Sioux Falls", "South Bend", "South Lyon", "Spartanburg", "Spokane", "Springdale", "Springfield", "St. Louis", "St. Paul", "St. Petersburg", "Stamford", "Sterling Heights", "Stockton", "Sunnyvale", "Syracuse", "Tacoma", "Tallahassee", "Tampa", "Temecula", "Tempe", "Thornton", "Thousand Oaks", "Toledo", "Topeka", "Torrance", "Trenton", "Tucson", "Tulsa", "Tuscaloosa", "Tyler", "Utica", "Vallejo", "Vancouver", "Vero Beach", "Victorville", "Virginia Beach", "Visalia", "Waco", "Warren", "Washington", "Waterbury", "Waterloo", "West Covina", "West Valley City", "Westminster", "Wichita", "Wilmington", "Winston", "Winter Haven", "Worcester", "Yakima", "Yonkers", "York", "Youngstown"];
+-var degrees = ["School", "High school", "University", "Other"]
+-var skills = ["HTML", "Pug", "CSS", "SASS", "JS", "PHP", "Java"]
+
+
+doctype html
+html(lang="en")
+    head 
+        include includes/head-meta.pug
+        title CV Generator
+        // CSS
+        link(rel="stylesheet", href="../css/style.css")
+
+    body 
+        header: h1 Curriculum Generator
+
+        hr
+        nav: ul 
+            li: a(href="#personalData") Personal Details 
+            li: a(href="#summarySection") Summary 
+            li: a(href="#experience") Experience 
+            li: a(href="#education") Education 
+            li: a(href="#languages") Languages 
+            li: a(href="#skills") Skills 
+        hr
+
+
+        main
+            form(id="form", action="script.php", method="GET")
+                fieldset(id="personalData")
+                    legend Personal Details 
+                    p 
+                        label(for="photo") Upload photo 
+                        input(type="file", id="photo", name="photo", accept="image/png, image/jpeg, image/jpg") 
+                    p 
+                        label(for="firstName") First name 
+                        input(type="text", id="name", name="name", required, autofocus)
+                    p 
+                        label(for="lastName") Last name 
+                        input(type="text", id="lastName", name="lastName" ,required)
+                    p 
+                        label(for="email") Email 
+                        input(type="email", id="email", name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$", placeholder="example@email.com" ,required)
+                    p 
+                        label(for="phone") Phone 
+                        input(type="tel", id="phone", name="phone", pattern="+[0-9]{2} [0-9]{9}", placeholder="+34 123456789")
+                    p 
+                        label(for="country") Country 
+                        input(type="text", list="countriesList", id="country", name="country") 
+                        +createDataList("countriesList", ...countries)
+
+                    p 
+                        label(for="city") City 
+                        input(type="text", list="citiesList" id="city", name="city") 
+                        +createDataList("citiesList", ...cities)
+
+                fieldset(id="summarySection")
+                    legend Summary 
+                    p Write 2-4 short &amp; energetic sentences to interest the reader! Mention your role, experience &amp; most importantly - your biggest achievements, best qualities and skills.
+                    p: textarea(id="summary", name="summary", cols="50", rows="10", placeholder="e.g. Passionate science teacher with 8+ years of experience and a track record of ...")
+
+                fieldset(id="experience")
+                    legend Experience 
+                    p Type here the info about your last job
+                    p 
+                        label(for="jobTitle") Job title 
+                        input(type="text", id="jobTitle", name="jobTitle")
+                    p 
+                        label(for="employer") Employer 
+                        input(type="text", id="employer", name="employer") 
+                    p 
+                        label(for="jobDate") Start &amp; End Date
+                        div(id="jobDate") 
+                            input(type="date", id="startDate", name="startDate")
+                            input(type="date", id="endDate", name="endDate")
+                    p 
+                        label(for="jobCity") City 
+                        input(type="text", list="citiesList", id="jobCity", name="jobCity") 
+                    p 
+                        label(for="jobDescription") Job description <br> 
+                        textarea(id="jobDescription", name="jobDescription", cols="50", rows="10", placeholder="Type here a summary of your professional work :)")
+
+                fieldset(id="education")
+                    legend Education 
+                    p Type here the info about your last job.
+                    p 
+                        label(for="degree") Degree 
+                        select(id="degree", name="degree")
+                            option(selected, disabled) Select a degree
+                            each degree in degrees 
+                                option(value=degree) #{degree}
+                    p 
+                        label(for="otherDegree") Other degree 
+                        input(type="text", id="otherDegree", name="otherDegree", placeholder="Which one?") 
+
+                fieldset(id="languages")
+                    legend Languages 
+                    //- TODO languages loop?
+                    p 
+                        label(for="english") English 
+                        input(type="range", id="english", name="english", min="0", max="2")
+                    p 
+                        label(for="spanish") Spanish
+                        input(type="range", id="spanish", name="spanish", min="0", max="2")
+                    p 
+                        label(for="chinese") Chinese
+                        input(type="range", id="chinese", name="chinese", min="0", max="2")
+
+                fieldset(id="skills")
+                    legend Skills 
+                    each skill in skills 
+                        p
+                            input(type="checkbox", id=skill, name=skill)
+                            label(for=skill) #{skill} 
+
+                fieldset 
+                    legend Terms of service 
+                    p 
+                        input(type="checkbox", id="terms", name="terms", checked, required)
+                        label(for="terms") I agree to the 
+                            a(href="https://www.google.com/search?q=terms+of+use", target="_blank") terms of service.
+
+                fieldset
+                    section(id="buttons")
+                        button(type="submit") Create CV 
+                        button(type="reset") Reset 
+
+        include includes/footer.pug

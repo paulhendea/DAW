@@ -1,0 +1,20 @@
+/// Mixin that adds vertical gradient for the buttons
+/// @parameter { color } $start-color - Start color for the gradient
+/// @parameter { color } $end-color - End color for the gradient
+/// @group buttons 
+@mixin gradient-x($start-color, $end-color) {
+  background-image: linear-gradient(
+    to bottom,
+    $start-color 70%,
+    $end-color 30%,
+  );
+}
+
+/// Mixin to give a rotation animation
+/// @parameter { integer } @duration - The duration of the animation in seconds
+/// @parameter { integer } @loops - How many loops to do
+/// @group cards
+@mixin rotateAnimation($duration, $loops) {
+  transition: linear #{$duration} + 's';
+  transform: rotate(#{360 * $loops} + 'deg');
+}

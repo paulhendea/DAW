@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 11</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    section#input {
+      width: 15em;
+      display: flex;
+      flex-direction: column;
+    }
+    section#input > * {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    section#game {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+    table {
+      height: 85vh;
+      aspect-ratio: 1;
+    }
+    table, td {
+      margin: 0px;
+      padding: 0px;
+      border-collapse: collapse;
+    }
+    table td {
+      width: 1.5em;
+      height: 1.5em;
+      text-align: center;
+      background-color: rgb(215, 184, 153);
+      font-weight: bolder;
+      font-size: larger;
+    }
+    table tr:nth-child(even) td.green:nth-child(even) {
+      background-color: rgb(162, 209, 73, 0.8);
+    }
+    table tr:nth-child(odd) td.green:nth-child(odd) {
+      background-color: rgb(162, 209, 73, 0.8);
+    }
+    table tr:nth-child(even) td:nth-child(even) {
+      background-color: rgb(215, 184, 153, 0.8);
+    }
+    table tr:nth-child(odd) td:nth-child(odd) {
+      background-color: rgb(215, 184, 153, 0.8);
+    }
+    table td.textBlue {
+      color: #1E78D1;
+    }
+    table td.textGreen {
+      color: #388E3C;
+    }
+    table td.textRed {
+      color: #D43836;
+    }
+    table td.textPurple {
+      color: #7121A6;
+    }
+    table td.textOrange {
+      color: #F29D35;
+    }
+    table td.textPink {
+      color: #F2059F;
+    }
+    table tr td.green {
+      background-color: rgb(162, 209, 73);
+    }
+    table tr td.red {
+      background-color: rgb(212, 56, 54) !important;
+    }
+    table tr td.blue {
+      background-color: rgb(30, 120, 209) !important;
+    }
+  </style>
+
+  <!-- JS -->
+  <script src="../js/activity11.js" async defer></script>
+  
+</head>
+<body>
+
+  <header>
+    <h1 class="center">Minesweeper Game :)</h1>
+  </header>
+
+  <main>
+    <section id="input">
+      <input type="number" id="boardSize" name="boardSize" placeholder="Board size (2-50)">
+      <input type="number" id="minesNumber" name="minesNumber" placeholder="Number of mines (1-9999)">
+      <button onclick="printBoard()">Print Board</button>
+    </section>
+
+    <section id="game"></section>
+  </main>
+  
+</body>
+</html>

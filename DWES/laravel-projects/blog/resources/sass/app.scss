@@ -1,0 +1,84 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+html {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+header {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  text-align: center;
+}
+main .post-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+main form.form {
+  width: 25%;
+  margin: 0 auto;
+  text-align: left;
+}
+main article {
+  margin: 20px;
+  padding: 20px;
+
+  min-width: 500px;
+  width: 30%; 
+  height: auto; 
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid black;
+  border-radius: 10px;
+}
+main article > * {
+  margin-bottom: 20px;
+}
+article header {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: start;
+  text-align: left;
+}
+article img {
+  width: 100%;
+}
+.image {
+  display: flex;
+  justify-content: center;
+}
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+#comments {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}

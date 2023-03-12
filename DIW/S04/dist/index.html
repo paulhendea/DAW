@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, nofollow">
+    <meta name="theme-color" content="lightblue">
+    <meta name="author" content="Paul Hendea">
+    <title>CV Generator</title>
+    <!-- CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body> 
+    <header>
+      <h1>Curriculum Generator</h1>
+    </header>
+    <hr>
+    <nav>
+      <ul> 
+        <li><a href="#personalData">Personal Details </a></li>
+        <li><a href="#summarySection">Summary </a></li>
+        <li><a href="#experience">Experience </a></li>
+        <li><a href="#education">Education </a></li>
+        <li><a href="#languages">Languages </a></li>
+        <li><a href="#skills">Skills </a></li>
+      </ul>
+    </nav>
+    <hr>
+    <main>
+      <form id="form" action="script.php" method="GET">
+        <fieldset id="personalData">
+          <legend>Personal Details </legend>
+          <p> 
+            <label for="photo">Upload photo </label>
+            <input type="file" id="photo" name="photo" accept="image/png, image/jpeg, image/jpg">
+          </p>
+          <p> 
+            <label for="firstName">First name </label>
+            <input type="text" id="name" name="name" required autofocus>
+          </p>
+          <p> 
+            <label for="lastName">Last name </label>
+            <input type="text" id="lastName" name="lastName" required>
+          </p>
+          <p> 
+            <label for="email">Email </label>
+            <input type="email" id="email" name="email" pattern="^[w-.]+@([w-]+.)+[w-]{2,4}$" placeholder="example@email.com" required>
+          </p>
+          <p> 
+            <label for="phone">Phone </label>
+            <input type="tel" id="phone" name="phone" pattern="+[0-9]{2} [0-9]{9}" placeholder="+34 123456789">
+          </p>
+          <p> 
+            <label for="country">Country </label>
+            <input type="text" list="countriesList" id="country" name="country">
+            <datalist id="countriesList">
+              <option value="Hungary"></option>
+              <option value="Belarus"></option>
+              <option value="Austria"></option>
+              <option value="Serbia"></option>
+              <option value="Switzerland"></option>
+              <option value="Germany"></option>
+              <option value="Holy See"></option>
+              <option value="Andorra"></option>
+              <option value="Bulgaria"></option>
+              <option value="United Kingdom"></option>
+              <option value="France"></option>
+              <option value="Montenegro"></option>
+              <option value="Luxembourg"></option>
+              <option value="Italy"></option>
+              <option value="Denmark"></option>
+              <option value="Finland"></option>
+              <option value="Slovakia"></option>
+              <option value="Norway"></option>
+              <option value="Ireland"></option>
+              <option value="Spain"></option>
+              <option value="Malta"></option>
+              <option value="Ukraine"></option>
+              <option value="Croatia"></option>
+              <option value="Moldova"></option>
+              <option value="Monaco"></option>
+              <option value="Liechtenstein"></option>
+              <option value="Poland"></option>
+              <option value="Iceland"></option>
+              <option value="San Marino"></option>
+              <option value="Albania"></option>
+              <option value="Lithuania"></option>
+              <option value="North Macedonia"></option>
+              <option value="Slovenia"></option>
+              <option value="Romania"></option>
+              <option value="Latvia"></option>
+              <option value="Netherlands"></option>
+              <option value="Russia"></option>
+              <option value="Estonia"></option>
+              <option value="Belgium"></option>
+              <option value="Czech Republic"></option>
+              <option value="Greece"></option>
+              <option value="Portugal"></option>
+              <option value="Sweden"></option>
+            </datalist>
+          </p>
+          <p> 
+            <label for="city">City </label>
+            <input type="text" list="citiesList" id="city" name="city">
+            <datalist id="citiesList">
+              <option value="Aberdeen"></option>
+              <option value="Abilene"></option>
+              <option value="Akron"></option>
+              <option value="Albany"></option>
+              <option value="Albuquerque"></option>
+              <option value="Alexandria"></option>
+              <option value="Allentown"></option>
+              <option value="Amarillo"></option>
+              <option value="Anaheim"></option>
+              <option value="Anchorage"></option>
+              <option value="Ann Arbor"></option>
+              <option value="Antioch"></option>
+              <option value="Apple Valley"></option>
+              <option value="Appleton"></option>
+              <option value="Arlington"></option>
+              <option value="Arvada"></option>
+              <option value="Asheville"></option>
+              <option value="Athens"></option>
+              <option value="Atlanta"></option>
+              <option value="Atlantic City"></option>
+              <option value="Augusta"></option>
+              <option value="Aurora"></option>
+              <option value="Austin"></option>
+              <option value="Bakersfield"></option>
+              <option value="Baltimore"></option>
+              <option value="Barnstable"></option>
+              <option value="Baton Rouge"></option>
+              <option value="Beaumont"></option>
+              <option value="Bel Air"></option>
+              <option value="Bellevue"></option>
+              <option value="Berkeley"></option>
+              <option value="Bethlehem"></option>
+              <option value="Billings"></option>
+              <option value="Birmingham"></option>
+              <option value="Bloomington"></option>
+              <option value="Boise"></option>
+              <option value="Boise City"></option>
+              <option value="Bonita Springs"></option>
+              <option value="Boston"></option>
+              <option value="Boulder"></option>
+              <option value="Bradenton"></option>
+              <option value="Bremerton"></option>
+              <option value="Bridgeport"></option>
+              <option value="Brighton"></option>
+              <option value="Brownsville"></option>
+              <option value="Bryan"></option>
+              <option value="Buffalo"></option>
+              <option value="Burbank"></option>
+              <option value="Burlington"></option>
+              <option value="Cambridge"></option>
+              <option value="Canton"></option>
+              <option value="Cape Coral"></option>
+              <option value="Carrollton"></option>
+              <option value="Cary"></option>
+              <option value="Cathedral City"></option>
+              <option value="Cedar Rapids"></option>
+              <option value="Champaign"></option>
+              <option value="Chandler"></option>
+              <option value="Charleston"></option>
+              <option value="Charlotte"></option>
+              <option value="Chattanooga"></option>
+              <option value="Chesapeake"></option>
+              <option value="Chicago"></option>
+              <option value="Chula Vista"></option>
+              <option value="Cincinnati"></option>
+              <option value="Clarke County"></option>
+              <option value="Clarksville"></option>
+              <option value="Clearwater"></option>
+              <option value="Cleveland"></option>
+              <option value="College Station"></option>
+              <option value="Colorado Springs"></option>
+              <option value="Columbia"></option>
+              <option value="Columbus"></option>
+              <option value="Concord"></option>
+              <option value="Coral Springs"></option>
+              <option value="Corona"></option>
+              <option value="Corpus Christi"></option>
+              <option value="Costa Mesa"></option>
+              <option value="Dallas"></option>
+              <option value="Daly City"></option>
+              <option value="Danbury"></option>
+              <option value="Davenport"></option>
+              <option value="Davidson County"></option>
+              <option value="Dayton"></option>
+              <option value="Daytona Beach"></option>
+              <option value="Deltona"></option>
+              <option value="Denton"></option>
+              <option value="Denver"></option>
+              <option value="Des Moines"></option>
+              <option value="Detroit"></option>
+              <option value="Downey"></option>
+              <option value="Duluth"></option>
+              <option value="Durham"></option>
+              <option value="El Monte"></option>
+              <option value="El Paso"></option>
+              <option value="Elizabeth"></option>
+              <option value="Elk Grove"></option>
+              <option value="Elkhart"></option>
+              <option value="Erie"></option>
+              <option value="Escondido"></option>
+              <option value="Eugene"></option>
+              <option value="Evansville"></option>
+              <option value="Fairfield"></option>
+              <option value="Fargo"></option>
+              <option value="Fayetteville"></option>
+              <option value="Fitchburg"></option>
+              <option value="Flint"></option>
+              <option value="Fontana"></option>
+              <option value="Fort Collins"></option>
+              <option value="Fort Lauderdale"></option>
+              <option value="Fort Smith"></option>
+              <option value="Fort Walton Beach"></option>
+              <option value="Fort Wayne"></option>
+              <option value="Fort Worth"></option>
+              <option value="Frederick"></option>
+              <option value="Fremont"></option>
+              <option value="Fresno"></option>
+              <option value="Fullerton"></option>
+              <option value="Gainesville"></option>
+              <option value="Garden Grove"></option>
+              <option value="Garland"></option>
+              <option value="Gastonia"></option>
+              <option value="Gilbert"></option>
+              <option value="Glendale"></option>
+              <option value="Grand Prairie"></option>
+              <option value="Grand Rapids"></option>
+              <option value="Grayslake"></option>
+              <option value="Green Bay"></option>
+              <option value="GreenBay"></option>
+              <option value="Greensboro"></option>
+              <option value="Greenville"></option>
+              <option value="Gulfport-Biloxi"></option>
+              <option value="Hagerstown"></option>
+              <option value="Hampton"></option>
+              <option value="Harlingen"></option>
+              <option value="Harrisburg"></option>
+              <option value="Hartford"></option>
+              <option value="Havre de Grace"></option>
+              <option value="Hayward"></option>
+              <option value="Hemet"></option>
+              <option value="Henderson"></option>
+              <option value="Hesperia"></option>
+              <option value="Hialeah"></option>
+              <option value="Hickory"></option>
+              <option value="High Point"></option>
+              <option value="Hollywood"></option>
+              <option value="Honolulu"></option>
+              <option value="Houma"></option>
+              <option value="Houston"></option>
+              <option value="Howell"></option>
+              <option value="Huntington"></option>
+              <option value="Huntington Beach"></option>
+              <option value="Huntsville"></option>
+              <option value="Independence"></option>
+              <option value="Indianapolis"></option>
+              <option value="Inglewood"></option>
+              <option value="Irvine"></option>
+              <option value="Irving"></option>
+              <option value="Jackson"></option>
+              <option value="Jacksonville"></option>
+              <option value="Jefferson"></option>
+              <option value="Jersey City"></option>
+              <option value="Johnson City"></option>
+              <option value="Joliet"></option>
+              <option value="Kailua"></option>
+              <option value="Kalamazoo"></option>
+              <option value="Kaneohe"></option>
+              <option value="Kansas City"></option>
+              <option value="Kennewick"></option>
+              <option value="Kenosha"></option>
+              <option value="Killeen"></option>
+              <option value="Kissimmee"></option>
+              <option value="Knoxville"></option>
+              <option value="Lacey"></option>
+              <option value="Lafayette"></option>
+              <option value="Lake Charles"></option>
+              <option value="Lakeland"></option>
+              <option value="Lakewood"></option>
+              <option value="Lancaster"></option>
+              <option value="Lansing"></option>
+              <option value="Laredo"></option>
+              <option value="Las Cruces"></option>
+              <option value="Las Vegas"></option>
+              <option value="Layton"></option>
+              <option value="Leominster"></option>
+              <option value="Lewisville"></option>
+              <option value="Lexington"></option>
+              <option value="Lincoln"></option>
+              <option value="Little Rock"></option>
+              <option value="Long Beach"></option>
+              <option value="Lorain"></option>
+              <option value="Los Angeles"></option>
+              <option value="Louisville"></option>
+              <option value="Lowell"></option>
+              <option value="Lubbock"></option>
+              <option value="Macon"></option>
+              <option value="Madison"></option>
+              <option value="Manchester"></option>
+              <option value="Marina"></option>
+              <option value="Marysville"></option>
+              <option value="McAllen"></option>
+              <option value="McHenry"></option>
+              <option value="Medford"></option>
+              <option value="Melbourne"></option>
+              <option value="Memphis"></option>
+              <option value="Merced"></option>
+              <option value="Mesa"></option>
+              <option value="Mesquite"></option>
+              <option value="Miami"></option>
+              <option value="Milwaukee"></option>
+              <option value="Minneapolis"></option>
+              <option value="Miramar"></option>
+              <option value="Mission Viejo"></option>
+              <option value="Mobile"></option>
+              <option value="Modesto"></option>
+              <option value="Monroe"></option>
+              <option value="Monterey"></option>
+              <option value="Montgomery"></option>
+              <option value="Moreno Valley"></option>
+              <option value="Murfreesboro"></option>
+              <option value="Murrieta"></option>
+              <option value="Muskegon"></option>
+              <option value="Myrtle Beach"></option>
+              <option value="Naperville"></option>
+              <option value="Naples"></option>
+              <option value="Nashua"></option>
+              <option value="Nashville"></option>
+              <option value="New Bedford"></option>
+              <option value="New Haven"></option>
+              <option value="New London"></option>
+              <option value="New Orleans"></option>
+              <option value="New York"></option>
+              <option value="New York City"></option>
+              <option value="Newark"></option>
+              <option value="Newburgh"></option>
+              <option value="Newport News"></option>
+              <option value="Norfolk"></option>
+              <option value="Normal"></option>
+              <option value="Norman"></option>
+              <option value="North Charleston"></option>
+              <option value="North Las Vegas"></option>
+              <option value="North Port"></option>
+              <option value="Norwalk"></option>
+              <option value="Norwich"></option>
+              <option value="Oakland"></option>
+              <option value="Ocala"></option>
+              <option value="Oceanside"></option>
+              <option value="Odessa"></option>
+              <option value="Ogden"></option>
+              <option value="Oklahoma City"></option>
+              <option value="Olathe"></option>
+              <option value="Olympia"></option>
+              <option value="Omaha"></option>
+              <option value="Ontario"></option>
+              <option value="Orange"></option>
+              <option value="Orem"></option>
+              <option value="Orlando"></option>
+              <option value="Overland Park"></option>
+              <option value="Oxnard"></option>
+              <option value="Palm Bay"></option>
+              <option value="Palm Springs"></option>
+              <option value="Palmdale"></option>
+              <option value="Panama City"></option>
+              <option value="Pasadena"></option>
+              <option value="Paterson"></option>
+              <option value="Pembroke Pines"></option>
+              <option value="Pensacola"></option>
+              <option value="Peoria"></option>
+              <option value="Philadelphia"></option>
+              <option value="Phoenix"></option>
+              <option value="Pittsburgh"></option>
+              <option value="Plano"></option>
+              <option value="Pomona"></option>
+              <option value="Pompano Beach"></option>
+              <option value="Port Arthur"></option>
+              <option value="Port Orange"></option>
+              <option value="Port Saint Lucie"></option>
+              <option value="Port St. Lucie"></option>
+              <option value="Portland"></option>
+              <option value="Portsmouth"></option>
+              <option value="Poughkeepsie"></option>
+              <option value="Providence"></option>
+              <option value="Provo"></option>
+              <option value="Pueblo"></option>
+              <option value="Punta Gorda"></option>
+              <option value="Racine"></option>
+              <option value="Raleigh"></option>
+              <option value="Rancho Cucamonga"></option>
+              <option value="Reading"></option>
+              <option value="Redding"></option>
+              <option value="Reno"></option>
+              <option value="Richland"></option>
+              <option value="Richmond"></option>
+              <option value="Richmond County"></option>
+              <option value="Riverside"></option>
+              <option value="Roanoke"></option>
+              <option value="Rochester"></option>
+              <option value="Rockford"></option>
+              <option value="Roseville"></option>
+              <option value="Round Lake Beach"></option>
+              <option value="Sacramento"></option>
+              <option value="Saginaw"></option>
+              <option value="Saint Louis"></option>
+              <option value="Saint Paul"></option>
+              <option value="Saint Petersburg"></option>
+              <option value="Salem"></option>
+              <option value="Salinas"></option>
+              <option value="Salt Lake City"></option>
+              <option value="San Antonio"></option>
+              <option value="San Bernardino"></option>
+              <option value="San Buenaventura"></option>
+              <option value="San Diego"></option>
+              <option value="San Francisco"></option>
+              <option value="San Jose"></option>
+              <option value="Santa Ana"></option>
+              <option value="Santa Barbara"></option>
+              <option value="Santa Clara"></option>
+              <option value="Santa Clarita"></option>
+              <option value="Santa Cruz"></option>
+              <option value="Santa Maria"></option>
+              <option value="Santa Rosa"></option>
+              <option value="Sarasota"></option>
+              <option value="Savannah"></option>
+              <option value="Scottsdale"></option>
+              <option value="Scranton"></option>
+              <option value="Seaside"></option>
+              <option value="Seattle"></option>
+              <option value="Sebastian"></option>
+              <option value="Shreveport"></option>
+              <option value="Simi Valley"></option>
+              <option value="Sioux City"></option>
+              <option value="Sioux Falls"></option>
+              <option value="South Bend"></option>
+              <option value="South Lyon"></option>
+              <option value="Spartanburg"></option>
+              <option value="Spokane"></option>
+              <option value="Springdale"></option>
+              <option value="Springfield"></option>
+              <option value="St. Louis"></option>
+              <option value="St. Paul"></option>
+              <option value="St. Petersburg"></option>
+              <option value="Stamford"></option>
+              <option value="Sterling Heights"></option>
+              <option value="Stockton"></option>
+              <option value="Sunnyvale"></option>
+              <option value="Syracuse"></option>
+              <option value="Tacoma"></option>
+              <option value="Tallahassee"></option>
+              <option value="Tampa"></option>
+              <option value="Temecula"></option>
+              <option value="Tempe"></option>
+              <option value="Thornton"></option>
+              <option value="Thousand Oaks"></option>
+              <option value="Toledo"></option>
+              <option value="Topeka"></option>
+              <option value="Torrance"></option>
+              <option value="Trenton"></option>
+              <option value="Tucson"></option>
+              <option value="Tulsa"></option>
+              <option value="Tuscaloosa"></option>
+              <option value="Tyler"></option>
+              <option value="Utica"></option>
+              <option value="Vallejo"></option>
+              <option value="Vancouver"></option>
+              <option value="Vero Beach"></option>
+              <option value="Victorville"></option>
+              <option value="Virginia Beach"></option>
+              <option value="Visalia"></option>
+              <option value="Waco"></option>
+              <option value="Warren"></option>
+              <option value="Washington"></option>
+              <option value="Waterbury"></option>
+              <option value="Waterloo"></option>
+              <option value="West Covina"></option>
+              <option value="West Valley City"></option>
+              <option value="Westminster"></option>
+              <option value="Wichita"></option>
+              <option value="Wilmington"></option>
+              <option value="Winston"></option>
+              <option value="Winter Haven"></option>
+              <option value="Worcester"></option>
+              <option value="Yakima"></option>
+              <option value="Yonkers"></option>
+              <option value="York"></option>
+              <option value="Youngstown"></option>
+            </datalist>
+          </p>
+        </fieldset>
+        <fieldset id="summarySection">
+          <legend>Summary </legend>
+          <p>Write 2-4 short &amp; energetic sentences to interest the reader! Mention your role, experience &amp; most importantly - your biggest achievements, best qualities and skills.</p>
+          <p>
+            <textarea id="summary" name="summary" cols="50" rows="10" placeholder="e.g. Passionate science teacher with 8+ years of experience and a track record of ..."></textarea>
+          </p>
+        </fieldset>
+        <fieldset id="experience">
+          <legend>Experience </legend>
+          <p>Type here the info about your last job</p>
+          <p> 
+            <label for="jobTitle">Job title </label>
+            <input type="text" id="jobTitle" name="jobTitle">
+          </p>
+          <p> 
+            <label for="employer">Employer </label>
+            <input type="text" id="employer" name="employer">
+          </p>
+          <p> 
+            <label for="jobDate">Start &amp; End Date</label>
+            <div id="jobDate"> 
+              <input type="date" id="startDate" name="startDate">
+              <input type="date" id="endDate" name="endDate">
+            </div>
+          </p>
+          <p> 
+            <label for="jobCity">City </label>
+            <input type="text" list="citiesList" id="jobCity" name="jobCity">
+          </p>
+          <p> 
+            <label for="jobDescription">Job description <br> </label>
+            <textarea id="jobDescription" name="jobDescription" cols="50" rows="10" placeholder="Type here a summary of your professional work :)"></textarea>
+          </p>
+        </fieldset>
+        <fieldset id="education">
+          <legend>Education </legend>
+          <p>Type here the info about your last job.</p>
+          <p> 
+            <label for="degree">Degree </label>
+            <select id="degree" name="degree">
+              <option selected disabled>Select a degree</option>
+              <option value="School">School</option>
+              <option value="High school">High school</option>
+              <option value="University">University</option>
+              <option value="Other">Other</option>
+            </select>
+          </p>
+          <p> 
+            <label for="otherDegree">Other degree </label>
+            <input type="text" id="otherDegree" name="otherDegree" placeholder="Which one?">
+          </p>
+        </fieldset>
+        <fieldset id="languages">
+          <legend>Languages </legend>
+          <p> 
+            <label for="english">English </label>
+            <input type="range" id="english" name="english" min="0" max="2">
+          </p>
+          <p> 
+            <label for="spanish">Spanish</label>
+            <input type="range" id="spanish" name="spanish" min="0" max="2">
+          </p>
+          <p> 
+            <label for="chinese">Chinese</label>
+            <input type="range" id="chinese" name="chinese" min="0" max="2">
+          </p>
+        </fieldset>
+        <fieldset id="skills">
+          <legend>Skills </legend>
+          <p>
+            <input type="checkbox" id="HTML" name="HTML">
+            <label for="HTML">HTML </label>
+          </p>
+          <p>
+            <input type="checkbox" id="Pug" name="Pug">
+            <label for="Pug">Pug </label>
+          </p>
+          <p>
+            <input type="checkbox" id="CSS" name="CSS">
+            <label for="CSS">CSS </label>
+          </p>
+          <p>
+            <input type="checkbox" id="SASS" name="SASS">
+            <label for="SASS">SASS </label>
+          </p>
+          <p>
+            <input type="checkbox" id="JS" name="JS">
+            <label for="JS">JS </label>
+          </p>
+          <p>
+            <input type="checkbox" id="PHP" name="PHP">
+            <label for="PHP">PHP </label>
+          </p>
+          <p>
+            <input type="checkbox" id="Java" name="Java">
+            <label for="Java">Java </label>
+          </p>
+        </fieldset>
+        <fieldset> 
+          <legend>Terms of service </legend>
+          <p> 
+            <input type="checkbox" id="terms" name="terms" checked required>
+            <label for="terms">I agree to the <a href="https://www.google.com/search?q=terms+of+use" target="_blank">terms of service.</a></label>
+          </p>
+        </fieldset>
+        <fieldset>
+          <section id="buttons">
+            <button type="submit">Create CV </button>
+            <button type="reset">Reset </button>
+          </section>
+        </fieldset>
+      </form>
+    </main>
+    <footer> 
+      <p>S04_PR1_PaulHendea</p>
+      <p>Copyright &#169; 2022</p>
+    </footer>
+  </body>
+</html>

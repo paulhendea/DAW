@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  margin: 1rem;
+  text-align: center;
+}
+
+main {
+  margin: 1rem;
+}
+main section {
+  width: 300px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}

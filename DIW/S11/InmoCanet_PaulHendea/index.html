@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InmoCaner - Inmobiliaria</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div><img src="img/logo.png" alt="logo"></div>
+    <div class="languages">
+      <div><img src="img/bandera_esp.png" alt="España"></div>
+      <div><img src="img/bandera_ing.png" alt="Inglaterra"></div>
+      <div><img src="img/bandera_fra.png" alt="Francia"></div>
+      <div><img src="img/bandera_ale.png" alt="Alemania"></div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Venta</a></li>
+      <li><a href="#">Alquiler</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+
+    <div class="form">
+      <input type="text" id="query" name="query">
+      <button>Buscar</button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="ficha">
+      <h1>Parecela urbana en Miramar</h1>
+      <div class="inline-items">
+        <p>Ref: P333555A</p>
+        <p><a href="#">+Info</a></p>
+      </div>
+      <div class="img"><img src="img/Parcela1.jpg" alt="Parcela1"></div>
+      <div class="social-media">
+        <div><img src="img/facebook.png" alt="Facebook"></div>
+        <div><img src="img/twitter.png" alt="Twitter"></div>
+        <div><img src="img/instagram.png" alt="Instagram"></div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <p>Envia un email a <a href="mailto:info@inmcan.eu">info@inmcan.eu</a></p>
+      <p>O rellena este Formulario:</p>
+      <form action="procesa.php" method="GET">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" maxlength="75" required autofocus>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" maxlength="75" required>
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" id="mensaje" maxlength="300" placeholder="En el mensaje cita la referencia del inmueble"></textarea>
+        <p>
+          <input type="checkbox" id="politica" name="politica" checked>
+          <label for="politica">Sí, acepto la política de privacidad</label>
+        </p>
+        <input type="submit" value="Enviar">
+      </form>
+
+    </section>
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursive</title>
+</head>
+
+<body>
+
+  <script>
+    // ask for the input until we get a number
+    let arrayLength
+    do {
+      arrayLength = prompt('How long do you want the array to be? ')
+    } while (isNaN(arrayLength))
+    // show result
+    alert(`The sequence is: ${getArrayFrom(+arrayLength).join(', ')}`)
+
+    function getArrayFrom(number) {
+      // define base case
+      if (number < 1) return [1]
+      if (number === 1) return [1]
+
+      // return an array with the number and the next array minus one
+      return [number, ...getArrayFrom(number - 1)]
+    }
+
+    // function 
+  </script>
+
+</body>
+
+</html>

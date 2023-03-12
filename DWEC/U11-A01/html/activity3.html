@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 3</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    main {
+      width: 50%;
+      margin: auto;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    main form#input {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    main form#input input,
+    main form#input button {
+      padding: 1rem;
+    }
+
+    main form#input input {
+      flex: 1;
+    }
+
+    main section#task-list {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%;
+    }
+
+    main section#task-list article {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid black;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+
+    main section#task-list article button {
+      padding: 0.2rem;
+    }
+  </style>
+
+  <!-- JS -->
+  <script src="../js/activity3.js" defer></script>
+
+</head>
+
+<body>
+
+  <header>
+    <h1>Task List 📋</h1>
+  </header>
+
+  <main>
+    <form id="input">
+      <input type="text" id="new-task" name="newTask" placeholder="New task">
+      <button id="add-task">+</button>
+    </form>
+
+    <section id="task-list">
+      <section />
+  </main>
+
+</body>
+
+</html>

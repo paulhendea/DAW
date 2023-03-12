@@ -1,0 +1,36 @@
+/// @group colors
+$background-color: #ccc;
+
+/// @group colors
+$base-color: #333;
+
+/// @group cards
+$border-color: $base-color;
+
+/// @group menu
+$navbar-background-color: rgb(155, 111, 145);
+
+/// @group menu 
+$navbar-color-hover: $background-color;
+
+/// @group buttons
+$color-error: red;
+
+/// @group buttons
+$color-warning: orange;
+
+/// @group buttons
+$color-accepted: green;
+
+/// @group buttons
+$color-normal: blue;
+
+/// @group buttons
+$color-shadow: #aaa;
+
+/// column color
+/// @group table
+$color-col-even: #ccc;
+
+/// @group table
+$color-col-odd: #888;

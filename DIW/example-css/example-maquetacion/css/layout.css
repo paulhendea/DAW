@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+
+  /* outline: 1px dotted green; */
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-image: url(../img/fondo.jpg);
+}
+
+body {
+  width: 80%;
+  margin-inline: auto;
+  margin-block: 1rem;
+}
+
+/* HEADER */
+header {
+  background-color: black;
+  border-radius: 10px 10px 0 0;
+}
+header > img {
+  display: block;
+  width: 30%;
+  margin-inline: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+/* MAIN */
+div#tabular {
+  display: table;
+}
+div#tabular nav {
+  display: table-cell;
+  width: 20%;
+  background-color: #cad2c5;
+}
+div#tabular main {
+  display: table-cell;
+  width: auto;
+  font-size: 0.9rem;
+  padding: 2em;
+}
+
+/* FOOTER */
+footer {
+  padding: 1rem;
+  color: white;
+  background-color: black;
+  border-radius: 0 0 10px 10px;
+}
+
+/* BUTTONS */
+nav ul {
+  list-style-type: none;
+}
+nav ul li a {
+  display: block;
+  width: 80%;
+  margin-inline: auto;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  text-align: center;
+  background-color: #14213d;
+  color: #fca311;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: #14213d;
+  background-color: #fca311;
+}

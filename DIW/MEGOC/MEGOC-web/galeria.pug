@@ -1,0 +1,90 @@
+doctype html
+html(lang="es")
+  header
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title MEGÒC
+
+    // CSS
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css", integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.css", integrity="sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg==", crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="../css/styles.css")
+    link(rel="stylesheet", href="../css/galeria.css")
+
+    // JS
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.8/glider.min.js", integrity="sha512-AZURF+lGBgrV0WM7dsCFwaQEltUV5964wxMv+TSzbb6G1/Poa9sFxaCed8l8CcFRTiP7FsCgCyOm/kf1LARyxA==", crossorigin="anonymous", referrerpolicy="no-referrer", defer)
+    script(src="../js/carousel.js", defer) 
+    script(src="../js/main.js", defer) 
+  
+  body
+    // nav
+    include includes/navbar.pug
+
+    main
+      section.carousel-section
+        h3 Febrero 2022
+        .carousel
+          .carousel__container
+            button.carousel__previous(aria-label="Anterior"): span.fa-solid.fa-angle-left
+            .carousel__list
+              .carousel__item: img(src="../img/img4.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img5.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img6.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img7.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img8.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img7.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img4.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img5.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img6.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img7.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img8.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img7.jpg", alt="Grupo MEGÒC")
+            button.carousel__next(aria-label="Siguiente"): span.fa-solid.fa-angle-right
+      
+      section.carousel-section
+        h3 Diciembre 2021
+        .carousel
+          .carousel__container
+            button.carousel__previous(aria-label="Anterior"): span.fa-solid.fa-angle-left
+            .carousel__list
+              .carousel__item: img(src="../img/img8.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img7.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img6.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img5.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img4.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img5.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img4.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img5.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img6.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img7.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img8.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img7.jpg", alt="Grupo MEGÒC")
+            button.carousel__next(aria-label="Siguiente"): span.fa-solid.fa-angle-right
+      
+      section.carousel-section
+        h3 Lorem Ipsum...
+        .carousel
+          .carousel__container
+            button.carousel__previous(aria-label="Anterior"): span.fa-solid.fa-angle-left
+            .carousel__list
+              .carousel__item: img(src="../img/img7.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img8.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img6.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img4.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img5.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img4.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img4.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img5.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img6.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img7.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img8.jpg", alt="Grupo MEGÒC")
+              .carousel__item: img(src="../img/img7.jpg", alt="Grupo MEGÒC")
+            button.carousel__next(aria-label="Siguiente"): span.fa-solid.fa-angle-right
+
+        
+    // footer
+    include includes/footer.pug
+    
+    // cookies
+    include includes/cookies.pug

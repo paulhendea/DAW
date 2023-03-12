@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Dancing Script', cursive;
+  font-size: 16px;
+}
+
+body {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+/* header */
+header {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: violet;
+  border-bottom: 1px solid violet;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* navbar */
+.container nav {
+  width: 10%;
+  padding: 1rem;
+  border-right: 1px solid violet;
+}
+
+.container nav div {
+  margin-bottom: 1rem;
+}
+
+/* content wrapper */
+.container .content_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+}
+
+.container .content_wrapper .content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+.container .content_wrapper .content main {
+  width: 55%;
+  padding: 1rem;
+  border: 1px solid blue;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.container .content_wrapper .content main img {
+  width: 80%;
+  border-radius: 1rem;
+}
+
+.container .content_wrapper .content article {
+  width: 40%;
+  padding: 1rem;
+  border: 1px solid blue;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.container .content_wrapper .content article img {
+  width: 80%;
+  border-radius: 1rem;
+}
+
+/* articles */
+.container .content_wrapper .articles {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1rem;
+}
+
+.container .content_wrapper .articles article {
+  width: 30%;
+  padding: 1rem;
+  border: 1px solid blue;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.container .content_wrapper .articles article img {
+  width: 80%;
+  border-radius: 1rem;
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-top: 1px solid violet;
+}
+
+footer img {
+  width: 50px;
+}

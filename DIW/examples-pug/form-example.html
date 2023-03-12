@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PUG form</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Paul Hendea">
+  </head>
+  <body>
+    <header> 
+      <h1>PUG form</h1>
+    </header>
+    <main>
+      <form name="data" action="script.php" method="GET">
+        <fieldset> 
+          <legend>Personal data</legend>
+          <p>
+            <label for="name">Name </label>
+            <input type="text" id="name" name="name" maxlength="100" autofocus>
+          </p>
+          <p>
+            <label for="male">Male </label>
+            <input type="radio" id="male" name="sex">
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="sex">
+          </p>
+          <p>
+            <label for="age">Age </label>
+            <input type="number" id="age" name="age" min="16" max="150">
+          </p>
+          <p> 
+            <label for="major">Major of 18</label>
+            <input type="checkbox" id="major" name="major" checked disabled>
+          </p>
+          <p> 
+            <label for="color">Favorite color: </label>
+            <input type="color" id="color" name="color">
+          </p>
+          <p> 
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" maxlength="50">
+          </p>
+        </fieldset>
+        <fieldset> 
+          <legend>Education</legend>
+          <p> 
+            <label for="schooling">Schooling </label>
+            <select id="schooling" name="schooling">
+              <option value="School">School</option>
+              <option value="High school">High school</option>
+              <option value="University">University</option>
+            </select>
+          </p>
+          <p> 
+            <label for="languages">Languages </label>
+            <select id="languages" name="languages" multiple size="2">
+              <option value="Spanish">Spanish</option>
+              <option value="English">English</option>
+              <option value="German">German</option>
+              <option value="French">French</option>
+            </select>
+          </p>
+          <p> 
+            <label for="driver-license">Driver license</label>
+            <input type="text" id="driver-license" name="driver-license" pattern="[A-C]([1-2]|M)">
+          </p>
+          <p> 
+            <label for="hobbies">Hobbies</label>
+            <input type="text" id="hobbies" name="hobbies" list="hobbiesList">
+            <!-- The datalist can be at the end of the html, they are linked throw the list attribute-->
+            <datalist id="hobbiesList">
+              <option value="Phishing"></option>
+              <option value="Gaming"></option>
+              <option value="Drawing"></option>
+              <option value="Sports"></option>
+            </datalist>
+          </p>
+        </fieldset>
+        <fieldset> 
+          <legend>Extra </legend>
+          <p>Hello world :)</p>
+        </fieldset>
+        <p>
+          <input type="reset" value="Delete">
+          <input type="submit" value="Send">
+        </p>
+      </form>
+    </main>
+  </body>
+</html>

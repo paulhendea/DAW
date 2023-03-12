@@ -1,0 +1,33 @@
+/// A map for the buttons styles and its colors codes
+/// @group buttons
+$button-colors: (
+  'error': $color-error,
+  'warning': $color-warning,
+  'accepted': $color-accepted,
+  'normal': $color-normal,
+);
+
+// buttons class
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: $button-border-radius;
+  padding: 0.5rem;
+
+  &:hover {
+    box-shadow: calc($button-border-radius / 2) calc($button-border-radius / 2) $color-shadow;
+  }
+
+  &:active {
+    background-color: $color-warning;
+    color: white;
+  }
+}
+
+// button color class
+@each $key, $value in $button-colors {
+  .btn-#{$key} {
+    @include gradient-x($value, $base-color);
+  }
+}

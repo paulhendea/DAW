@@ -1,0 +1,25 @@
+doctype html
+//- This is a comment in PUG
+
+//- This is a variable in PUG
+-var title="Pug title example"
+-var sections=["Books", "Films", "Articles"]
+
+
+html(lang="en")
+	head
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="author", content="Paul Hendea")
+	body
+		// HTML header
+		header
+			h1 I'm a heading 1
+		main
+			p I'm a paragraph
+
+			//- This is a for each loop in PUG
+			each section in sections
+				section(id=section)
+					h2 #{section}
+		footer

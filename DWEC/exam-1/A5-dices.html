@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dices</title>
+</head>
+
+<body>
+
+  <script>
+    const INITIAL_MONEY = 50
+    const MAX_MONEY = 200
+    const MIN_MONEY = 0
+    const MIN_BET = 1
+
+    var currentMoney = INITIAL_MONEY
+    do {
+
+      // get money bet
+      let moneyBet = prompt(`Current money: ${currentMoney} \nHow much do you want to bet?`)
+      while (isNaN(moneyBet) || moneyBet > currentMoney || moneyBet < MIN_BET) {
+        moneyBet = prompt(`Please, type a valid bet`)
+      }
+
+      // get dice bet
+      let diceBet = prompt(`What number would you like to bet for?`)
+      while (isNaN(diceBet) || diceBet < 1 || diceBet > 6) {
+        diceBet = prompt(`Please, type a valid number`)
+      }
+
+      // convert variables to numbers
+      diceBet = +diceBet
+      moneyBet = +moneyBet
+
+      // throw dice and resolve bet
+      let dice = throwDice()
+      console.log(`dice bet was ${diceBet}`)
+      console.log(`dice was ${dice}`)
+      if (diceBet === dice) {
+        currentMoney += moneyBet
+      }
+      else {
+        currentMoney -= moneyBet
+      }
+
+    } while (currentMoney > MIN_MONEY && currentMoney < MAX_MONEY)
+
+    // finish game
+    if (currentMoney <= MIN_MONEY) alert('You no more money... :(')
+    else alert('You won 200+ :)')
+
+
+    function throwDice() {
+        return Math.ceil(Math.random() * 6)
+      }
+  </script>
+
+</body>
+
+</html>

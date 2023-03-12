@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 5</title>
+
+    <!-- CSS -->
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        section {
+            margin: 10px;
+            padding: 20px;
+        }
+        #login {
+            width: fit-content;
+            border: 1px solid black;
+            border-radius: 10%;
+        }
+    </style>
+
+    <!-- JS -->
+    <script src="../js/activity5.js" async defer></script>
+</head>
+<body>
+
+    <main>
+        <section id="login">
+            <header><h1>Sing Up</h1></header>
+            <p><input type="text" id="username" required autofocus></p>
+            <p><input type="text" id="password" required></p>
+            <button onclick="checkCredentials()">Send</button>
+        </section>
+        <section id="response"></section>
+    </main>
+    
+</body>
+</html>

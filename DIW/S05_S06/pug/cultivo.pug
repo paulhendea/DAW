@@ -1,0 +1,35 @@
+html(lang="es")
+  head
+    include includes/head-meta.pug
+    title Café.net Club
+
+    // CSS
+    link(rel="stylesheet", href="../css/style.css")
+    link(rel="stylesheet", href="../css/cultivo.css")
+
+  body
+    main
+      h1 Suelo para cultivo 
+      hr
+      p Contenidos adecuados de nutrientes en un suelo para el cultivo del Café 
+      table
+        tr
+          th Elemento 
+          th(colspan="2") Cantidad Adecuada 
+        tr
+          td(rowspan="2") Acidez
+          td pH 
+          td 5.5 - 6.5 (meq/100ml)
+        tr
+          td Al 
+          td 0.3 (meq/100ml)
+        tr
+          td Calcio 
+          td Ca 
+          td(rowspan="3") 3.0 - 20 (meq/100ml)
+        tr
+          td Magnesio 
+          td Mg 
+        tr
+          td Potasio 
+          td K

@@ -1,0 +1,31 @@
+include includes/mixins.pug
+
+-var title = "Title"
+-var books = ["Quijote", "Bible", "Harry Potter", "Da Vinci Code"]
+-var authors = ["Cervantes", "God", "J. K. Rowlling", "Dan Brown"]
+
+doctype html 
+html(lang="en")
+    include includes/head.pug
+
+    body 
+        header 
+        main 
+            section(id="books")
+                h1 Books
+                ul 
+                    each book in books 
+                        li #{book}
+
+            section(id="authors")
+                h1 Authors
+                +createList("Authors", ...authors)
+
+            section(id="photos")
+                h1 Photos 
+                -for (let i = 1; i <= 5; i++)
+                    -let url = `img/image${i}.png`
+                    -let alt = `Image ${i}`
+                    +createImage(url, alt)
+
+        include includes/footer.pug

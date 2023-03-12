@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <header>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGÒC</title>
+    <!-- CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <!-- JS-->
+    <script src="../js/main.js" defer></script>
+  </header>
+  <body>
+    <!-- nav-->
+    <nav>
+      <div id="logo"><a href="index.html"><img src="../img/logo_sm.png" alt="logo"></a></div>
+      <div id="nav-buttons">
+        <div id="hamburger"> 
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </nav>
+    <menu id="menu">
+      <ul>
+        <li><a href="index.html">Quiénes somos</a></li>
+        <li><a href="te-gusta-cantar.html">¿Te gusta cantar?</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="proximas-actuaciones.html">Próximas actuaciones</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div id="menu-buttons">
+        <div id="lang-social-buttons">
+          <div id="languages"><a href="ca/index.html">CA</a>
+            <div class="separator"></div><a href="en/index.html">EN</a>
+          </div>
+          <div id="social-media"><a href="http://www.facebook.com/ModernEspaiGospelCor"><span class="fa-brands fa-square-facebook"></span></a><a href="http://www.instagram.com/modernespaigospelcor"><span class="fa-brands fa-square-instagram"></span></a></div>
+        </div>
+      </div>
+    </menu>
+    <main>
+      <section class="contact">
+        <div class="content">
+          <h3>Contacta con nosotros</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, veniam. Maiores nisi vitae perferendis quaerat consectetur, delectus quasi, magnam praesentium culpa cum, voluptate quod! Dignissimos.</p>
+        </div>
+        <form method="POST" action="#"> 
+          <input type="text" name="name" placeholder="Tu nombre" required autofocus>
+          <input type="email" name="email" placeholder="Tu correo electrónico" required>
+          <textarea name="message" cols="30" rows="1" placeholder="Tu mensaje"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <!-- footer-->
+    <footer>
+      <article>
+        <h3>Redes</h3><a href="https://www.facebook.com/ModernEspaiGospelCor">Facebook</a><a href="https://www.instagram.com/modernespaigospelcor">Instagram </a>
+      </article>
+      <article>
+        <h3>Contacto</h3><a href="mailto:contacto@megoc.es">contacto@megoc.es </a><a href="tel:#">627 12 3456</a>
+      </article>
+      <article>
+        <h3>Info</h3><a href="#">Info legal </a>
+      </article>
+    </footer>
+    <!-- cookies-->
+    <div id="cookies-banner">
+      <p>La política de cookies es un texto legal en el que una página una página informa al usuario sobre el tipo de cookies que usa y con qué finalidad. Es uno de los principales textos RGPD junto con el <a href="#">link aviso legal y la política de privacidad.</a></p>
+      <div class="buttons">
+        <button id="cookiesAccepted">Aceptar</button>
+        <button id="cookiesDeclined">Rechazar</button>
+      </div>
+    </div>
+  </body>
+</html>

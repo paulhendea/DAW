@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 9</title>
+</head>
+
+<body>
+
+    <h1>Registration form</h1>
+    <form method="GET" action="#">
+        <label for="name">Name: </label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="username">Username: </label><br>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password: </label><br>
+        <input type="password" id="password" name="password" pattern=".{6,12}" required><br>
+
+        <label for="birthday">Birthday: </label>
+        <input type="date" id="birthday" name="birthday"><br>
+
+        <label for="ocupation">I am </label>
+        <select id="ocupation" name="ocupation">
+            <option value="" selected disabled>a cat?</option>
+            <option value="student">a student</option>
+            <option value="teacher">a teacher</option>
+            <option value="owner">a business owner</option>
+            <option value="self-employed">a self-employed</option>
+            <option value="other">another thing...</option>
+        </select><br>
+
+        <label for="phone">Mobile phone: </label><br>
+        <input type="tel" id="phone" name="phone" pattern="\+[0-9]{2} [0-9]{9}" placeholder="+34 123456789"
+            required><br>
+
+        <label for="english">Select your english level (0-10): </label><br>
+        <input type="range" id="english" name="english" min="0" max="10">
+
+        <br><br>
+        <input type="submit" value="Sign me up">
+    </form>
+
+</body>
+
+</html>

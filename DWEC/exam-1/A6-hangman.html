@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangman game</title>
+</head>
+
+<body>
+
+  <script>
+
+    const POSSIBLE_WORDS = ['green', 'house', 'yellow', 'snake', 'javascript']
+    const MAX_TRIES = 6
+    var isGameEnd = false
+    var isGameOver = false
+
+    // start game
+    let tries = MAX_TRIES
+    let word = getRandomWord(POSSIBLE_WORDS)
+    let hiddenWord = getAsteriskString(word.length)
+
+    do {
+
+      // ask for a letter or a guess
+      let guess = prompt(`${hiddenWord}\nYou have ${tries} left\nType a letter or thy to guess`)
+
+      // if it was a guess check the whole word
+      if (guess.length > 1) {
+        isGameEnd = true
+        isGameOver = guess != word
+      }
+      // else reveal the letters
+      else {
+        hiddenWord = reveal(hiddenWord, word, guess)
+      }
+
+      // check if the word was revealed
+      if (isGameWon) isGameEnd = true
+      tries--
+
+    } while (!isGameEnd && tries > 0)
+
+    // was game over?
+    if (tries < 1) {
+      isGameOver = true
+    }
+
+    // resolve game
+    if (isGameOver) alert(`Game over, the word was ${word}`)
+    else alert(`${word}\nYou won! :)`)
+
+
+
+    function getRandomWord(words) {
+      let randomWord = Math.floor(Math.random() * words.length)
+      return words[randomWord]
+    }
+    function getAsteriskString(length) {
+      let string = ''
+      for (let i = 0; i < length; i++) {
+        string += '*'
+      }
+      return string
+    }
+    function reveal(hiddenWord, word, letter) {
+      for (let i = 0; i < word.length; i++) {
+        if (word[i] === letter) hiddenWord[i] = letter
+      }
+      return hiddenWord
+    }
+    function isGameWon(hiddenWord) {
+      return !hiddenWord.includes('*')
+    }
+
+  </script>
+
+</body>
+
+</html>

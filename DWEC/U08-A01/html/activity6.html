@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 6</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    main {
+      display: none;
+    }
+    main #images {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      gap: 2rem;
+      width: 100%;
+    }
+    main #images > * {
+      flex-basis: 45%;
+    }
+    main img {
+      width: 100%;
+    }
+
+    #loading {
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      border: 5px solid lightblue;
+      border-radius: 100%;
+      border-top-color: blue;
+      animation: spin 1s cubic-bezier(0.5,.15,0.5,.85) infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <!-- JS -->
+  <script src="../js/activity6.js" defer></script>
+
+</head>
+
+<body>
+
+  <header>
+    <h1 class="center">Cool backgrounds 🌆</h1>
+    <div id="loading"></div>
+  </header>
+
+  <main>
+    <section id="images">
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/brook-one-piece-red-10701.jpg" alt="1"></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/usopp-one-piece-red-10700.jpg" alt="2"></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/nico-robin-one-piece-red-10699.jpg" alt="3"></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/roronoa-zoro-one-piece-red-10698.jpg" alt="4"></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/sanji-one-piece-red-10697.jpg" alt="5"></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/vivi-one-piece-red-10689.jpg" alt="6"></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/jinbe-one-piece-red-10688.jpg" alt="7"></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/nami-one-piece-red-10687.jpg" alt="8"></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/mitsuri-kanroji-de-kimetsu-no-yaiba-11223.jpg" alt=""></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/obito-uchiha-3627.jpg" alt=""></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/aizen-bleach-anime-11099.jpg" alt=""></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/milo-y-eldergoss-de-pokemon-espada-y-pokemon-escudo-4370.jpg" alt=""></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/genos-one-punch-man-3220.jpg" alt=""></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/totoro-y-kaonashi-no-face-de-el-viaje-de-chihiro-5035.jpg" alt=""></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/obito-uchiha-contra-kakashi-hatake-3628.jpg" alt=""></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/zero-two-de-darling-in-the-franxx-4667.jpg" alt=""></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/pintura-one-piece-4982.jpg" alt=""></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/zenitsu-agatsuma-de-guardianes-de-la-noche-4037.jpg" alt=""></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/tanjiro-flame-demon-slayer-9119.jpg" alt=""></div>
+      <div class="img"><img src="https://www.xtrafondos.com/wallpapers/nobara-kugisaki-de-jujutsu-kaisen-6715.jpg" alt=""></div>
+    </section>
+  </main>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+body
+{
+    background-color: #99ccff;
+    font-family: Arial
+}
+
+#cabecera
+{
+    margin-bottom: 30px;
+}
+#title
+{
+    float:left;
+    width:100%;
+    margin-bottom: 20px;
+}
+#logo
+{
+    float: left;
+    width: 20%;
+}
+#textotitle
+{
+    float: left;
+    font-size:3em;
+    width: 70%;
+}
+#nuevoOK
+{
+    display: none;
+}
+#nuevoError
+{
+    display: none;
+}
+.tareas {
+    margin-block: 1rem;
+    padding-left: 0;
+}
+.tarea {
+    margin-block-end: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+}

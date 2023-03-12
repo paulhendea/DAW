@@ -1,0 +1,24 @@
+main div.container {
+  font-size: 0;
+  width: 100%;
+  background-color: lightblue;
+}
+main div.container nav#nav2, 
+main div.container article {
+  display: inline-block;
+  vertical-align: top;
+}
+main div.container nav#nav2 {
+  width: 20%;
+  font-size: 1rem;
+}
+main div.container article {
+  font-size: 1rem;
+  width: 80%;
+}
+
+main div.container article div {
+  display: inline-block;
+  margin-right: 0rem;
+  vertical-align: top;
+}

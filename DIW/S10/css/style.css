@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header section#social-media {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* NAV 1 */
+nav#nav1 {
+  background-color: lightblue;
+  opacity: 0.8;
+}
+nav#nav1 ul {
+  display: flex;
+  list-style-type: none;
+}
+nav#nav1 ul li {
+  margin: 0.5rem 0 0.5rem 3rem;
+}
+nav#nav1 ul li a {
+  display: block;
+  font-family: Tahoma, Verdana;
+  font-size: 16pt;
+  color: black;
+}
+nav#nav1 ul li a:hover {
+  background-color: red;
+}
+
+/* MAIN */
+main h1 {
+  padding: 1rem;
+  color: green;
+  background-color: rgba(100%, 100%, 100%, 0.8);
+  border-bottom: 5px solid green;
+}
+
+main nav#nav2 {
+  padding: 1.5rem 0.5rem;
+  background-color: lightblue;
+}
+main nav#nav2 ul {
+  padding-left: 1.5rem;
+  list-style-type: none;
+}
+main nav#nav2 ul li {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+main nav#nav2 > ul > li:hover {
+  color: red;
+}
+main nav#nav2 > ul > li > ul > li:hover {
+  text-decoration: underline;
+}
+
+main article {
+  padding: 2rem;
+  background-color: white;
+}
+main article h2 {
+  color: blue;
+  letter-spacing: 2px;
+}
+main article table, 
+main article table td {
+  padding: 0.25rem;
+  border: 1px dotted red;
+  border-collapse: collapse;
+}
+main article table a {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+main article table tr td:first-child {
+  font-family: 'Courier New', Courier, monospace;
+}
+main article table, 
+main article div {
+  margin-right: 2rem;
+}
+
+/* FOOTER */
+footer p {
+  color: grey;
+  background-color: lightgrey;
+  font-size: small;
+  font-style: italic;
+}
+footer div.container {
+  display: flex;
+  height: 120px;
+  justify-content: end;
+  align-items: start;
+  background-color: darkgrey;
+  background-image: url(../img/silueta.png);
+  background-repeat: no-repeat;
+  background-size:cover;
+}

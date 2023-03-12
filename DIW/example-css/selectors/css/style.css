@@ -1,0 +1,97 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  /* same as html */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px; /* since here 1rem = 16px */
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+}
+
+h2,
+h3,
+h4 {
+  margin-bottom: 1em;
+}
+
+/* descendant selector */
+h1#titul1 strong {
+  color: darkred;
+}
+
+table th.rojo,
+table td.rojo {
+  color: red;
+}
+
+table td > a {
+  color: purple;
+}
+
+h1:not(:first-child) {
+  color: lightgreen;
+}
+
+a:not(.rojo) {
+  color: aquamarine;
+}
+
+a.verder {
+  color: darkgreen;
+}
+
+/* first sibling */
+strong + em {
+  color: fuchsia;
+}
+
+/* all siblings */
+strong ~ em {
+  color: brown;
+}
+
+input[type='button'] {
+  background-color: lightskyblue;
+}
+
+a[href$='es'] {
+  background-color: yellow;
+}
+
+p:hover {
+  text-decoration: underline;
+}
+
+main *:hover {
+  background-color: lime;
+}
+
+h1::before {
+  content: url(../img/flecha.jpg);
+}
+
+p::after {
+  content: "author: Paul Hendea";
+  font-size: xx-small;
+}
+
+table tr:nth-child(3n) {
+  background-color: lightgray;
+}
+
+table tr:first-child {
+  background-color: black;
+  color: white;
+}
+
+form input[type="checkbox"]:hover + label {
+  font-size: 1.5em;
+}

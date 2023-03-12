@@ -1,0 +1,75 @@
+doctype html
+
+-var title = "PUG form"
+-var schoolingOptions = ["School", "High school", "University"]
+-var languages = ["Spanish", "English", "German", "French"]
+-var hobbies = ["Phishing", "Gaming", "Drawing", "Sports"]
+
+html(lang="en")
+    head
+        title #{title}
+        meta(charset="utf-8")
+        meta(name="author", content="Paul Hendea")
+
+    body
+        header 
+            h1 #{title}
+        
+        main
+            form(name="data", action="script.php", method="GET")
+                fieldset 
+                    legend Personal data
+                    p
+                        label(for="name") Name 
+                        input(type="text", id="name", name="name", maxlength="100", autofocus)
+                    p
+                        label(for="male") Male 
+                        input(type="radio", id="male", name="sex")
+                        label(for="female") Female
+                        input(type="radio", id="female", name="sex")
+                    p
+                        label(for="age") Age 
+                        input(type="number", id="age", name="age", min="16", max="150")
+                    p 
+                        label(for="major") Major of 18
+                        input(type="checkbox", id="major", name="major" checked, disabled)
+                    p 
+                    
+                        label(for="color") Favorite color: 
+                        input(type="color", id="color", name="color")
+                    p 
+                        label(for="email") Email
+                        input(type="email", id="email", name="email", maxlength="50")
+                    
+                fieldset 
+                    legend Education
+                    p 
+                        label(for="schooling") Schooling 
+                        select(id="schooling", name="schooling")
+                            each schooling in schoolingOptions 
+                                option(value=schooling) #{schooling}
+                    p 
+                        //- multiple allows multiple selections
+                        //- size controls the lines shown
+                        label(for="languages") Languages 
+                        select(id="languages", name="languages", multiple, size="2")
+                            each language in languages 
+                                option(value=language) #{language}
+                    p 
+                        label(for="driver-license") Driver license
+                        input(type="text", id="driver-license", name="driver-license", pattern='[A-C]([1-2]|M)')
+                    p 
+                        label(for="hobbies") Hobbies
+                        input(type="text", id="hobbies", name="hobbies", list="hobbiesList")
+                        // The datalist can be at the end of the html, they are linked throw the list attribute
+                        datalist(id="hobbiesList")
+                            each hobby in hobbies 
+                                option(value=hobby)
+                    
+                fieldset 
+                    legend Extra 
+                    p Hello world :)
+
+                p
+                    input(type="reset", value="Delete")
+                    input(type="submit", value="Send")

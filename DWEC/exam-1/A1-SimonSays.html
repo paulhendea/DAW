@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simon says</title>
+</head>
+
+<body>
+  <script>
+    const COLORS = ['blue', 'red', 'yellow', 'green'];
+    const SEQUENCE = [];
+    let isGameOver = false;
+    while (!isGameOver) {
+      // get a random color from our list of colors
+      // better use Math floor to avoid array out of index
+      let randomColor = Math.floor(Math.random() * COLORS.length);
+      let color = COLORS[randomColor];
+      // add the color to the sequence
+      SEQUENCE.push(color);
+      // display the round number and ask for the sequence, if the user sequence is wrong end game
+      alert(`Round ${SEQUENCE.length}. Current sequence is: ${SEQUENCE}`);
+      for (let i = 0; i < SEQUENCE.length; i++) {
+        if (!isGameOver) {
+          let userInput = prompt(`Enter the color ${i+1} (${COLORS}):`);
+          if (userInput !== SEQUENCE[i]) isGameOver = true;
+        }
+      }
+    }
+    alert(`You are wrong! You've survived ${SEQUENCE.length - 1} rounds`);
+  </script>
+</body>
+
+</html>

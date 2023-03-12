@@ -1,0 +1,35 @@
+doctype html
+html(lang="es")
+  header
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title MEGÒC
+
+    // CSS
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css", integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous", referrerpolicy="no-referrer")
+    link(rel="stylesheet", href="../css/styles.css")
+    link(rel="stylesheet", href="../css/te-gusta-cantar.css")
+
+    // JS
+    script(src="../js/main.js", defer)   
+  
+  body
+    // nav
+    include includes/navbar.pug
+
+    main
+      article
+        .content
+          h3 ¿Te gusta cantar?
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eaque sint vel dolorem. In natus deleniti accusantium quis soluta, iure tempora enim illo consequatur assumenda quos iste ipsum necessitatibus eligendi!
+          p Las próximas audiciones serán del 14 al 28 de marzo, 2023.
+      
+        #map
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2194.9444772747133!2d-0.12053831347610815!3d38.921228949880664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61e668c989fcf1%3A0xfc9283dc99492f51!2sParroquia%20de%20San%20Roque!5e0!3m2!1ses!2ses!4v1677429316409!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    // footer
+    include includes/footer.pug
+    
+    // cookies
+    include includes/cookies.pug

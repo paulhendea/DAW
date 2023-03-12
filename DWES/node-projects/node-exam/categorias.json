@@ -1,0 +1,5 @@
+{"_id":{"$oid":"63c818ea0c275ee261689670"},"codigo":"PROM","descripcion":"PROMESA","minEdad":18,"maxEdad":24,"__v":0}
+{"_id":{"$oid":"63c818ea0c275ee261689671"},"codigo":"SEN","descripcion":"SENIOR","minEdad":25,"maxEdad":39,"__v":0}
+{"_id":{"$oid":"63c818ea0c275ee261689672"},"codigo":"VET-A","descripcion":"VETERANOS A","minEdad":40,"maxEdad":49,"__v":0}
+{"_id":{"$oid":"63c818ea0c275ee261689673"},"codigo":"VET-B","descripcion":"VETERANOS B","minEdad":50,"maxEdad":59,"__v":0}
+{"_id":{"$oid":"63c818ea0c275ee261689674"},"codigo":"VET-C","descripcion":"VETERANOS C","minEdad":60,"maxEdad":100,"__v":0}

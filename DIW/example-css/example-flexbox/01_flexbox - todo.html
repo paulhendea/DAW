@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ejemplo display: flex </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Container Flex</h1>
+  </header>
+  <main>
+    <section id="galeria1">
+      <h3>Galeria 1: row wrap</h3>
+      <div class="flex">
+        <img src="img/diamonds_10.gif" alt="ten" />
+        <img src="img/diamonds_jack.gif" alt="jack" />
+        <img src="img/diamonds_queen.gif" alt="queen" />
+        <img src="img/diamonds_king.gif" alt="king" />
+        <img src="img/diamonds_ace.gif" alt="as" />
+      </div>
+    </section>
+    <section id="galeria2">
+      <h3>Galeria 2: row-reverse nowrap overflow:auto</h3>
+      <div class="flex">
+        <img src="img/diamonds_10.gif" alt="ten" />
+        <img src="img/diamonds_jack.gif" alt="jack" />
+        <img src="img/diamonds_queen.gif" alt="queen" />
+        <img src="img/diamonds_king.gif" alt="king" />
+        <img src="img/diamonds_ace.gif" alt="as" />
+      </div>
+    </section>
+    <section id="galeria3">
+      <h3>Galeria 3: height align-items</h3>
+      <div class="flex">
+        <img src="img/diamonds_10.gif" alt="ten" />
+        <img src="img/diamonds_jack.gif" alt="jack" />
+        <img src="img/diamonds_queen.gif" alt="queen" />
+        <img src="img/diamonds_king.gif" alt="king" />
+        <img src="img/diamonds_ace.gif" alt="as" />
+      </div>
+    </section>
+    <section id="noticias1">
+      <h3>Noticias 1: flex-grow</h3>
+      <div class="flex">
+        <div class="green">Noticia 1</div>
+        <div class="orange">Noticia 2</div>
+        <div class="green">Noticia 3</div>
+      </div>
+    </section>
+    <section id="noticias2">
+      <h3>Noticias 2: flex-shrink</h3>
+      <div class="flex">
+        <div class="green">Noticia 1</div>
+        <div class="orange">Noticia 2</div>
+        <div class="green">Noticia 3</div>
+      </div>
+    </section>
+  </main>
+</body>

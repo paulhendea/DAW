@@ -1,0 +1,169 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "DWES/node-projects/session_6",
+  "dateExported": "2023-01-09T23:13:24.424Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "0c588234-9ada-411b-b235-517a8fe274a5",
+      "colId": "5f1a8a5c-fc9e-4f5c-9d8a-b301f12a31a2",
+      "containerId": "",
+      "name": "http://localhost:3000/books",
+      "url": "http://localhost:3000/books",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2023-01-09T23:03:20.882Z",
+      "modified": "2023-01-09T23:03:20.882Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "668592da-ae4f-442e-b166-809526b3f724",
+      "colId": "5f1a8a5c-fc9e-4f5c-9d8a-b301f12a31a2",
+      "containerId": "",
+      "name": "http://localhost:3000/books/id",
+      "url": "http://localhost:3000/books/63bc9f14b95e4c63d7748ff0",
+      "method": "GET",
+      "sortNum": 20000,
+      "created": "2023-01-09T23:03:20.883Z",
+      "modified": "2023-01-09T23:11:55.121Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "2cf8203d-0efb-4104-827b-3639d1107bcf",
+      "colId": "5f1a8a5c-fc9e-4f5c-9d8a-b301f12a31a2",
+      "containerId": "",
+      "name": "http://localhost:3000/books",
+      "url": "http://localhost:3000/books",
+      "method": "POST",
+      "sortNum": 30000,
+      "created": "2023-01-09T23:03:20.884Z",
+      "modified": "2023-01-09T23:11:16.652Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"title\": \"One Piece - 1\",\n  \"publisher\": \"Planeta\",\n  \"price\": 4.99,\n  \"author\": \"63bc9a30c37a7d2fef7bfa52\",\n  \"comments\": {\n    \"nick\": \"pauhen\",\n    \"comment\": \"Nice book :)\"\n  }\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "11dcbd8b-9f02-49eb-aecd-17789eef68ae",
+      "colId": "5f1a8a5c-fc9e-4f5c-9d8a-b301f12a31a2",
+      "containerId": "",
+      "name": "http://localhost:3000/books/id",
+      "url": "http://localhost:3000/books/63bc9f14b95e4c63d7748ff0",
+      "method": "PUT",
+      "sortNum": 40000,
+      "created": "2023-01-09T23:03:20.885Z",
+      "modified": "2023-01-09T23:12:41.257Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"comments\": {\n    \"nick\": \"anonymous\",\n    \"comment\": \"Woooooooow!\"\n  }\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "7f1e2784-5e41-4b6d-a4d5-e5ab9fc129e1",
+      "colId": "5f1a8a5c-fc9e-4f5c-9d8a-b301f12a31a2",
+      "containerId": "",
+      "name": "http://localhost:3000/books/id",
+      "url": "http://localhost:3000/books/63bc9f14b95e4c63d7748ff0",
+      "method": "DELETE",
+      "sortNum": 50000,
+      "created": "2023-01-09T23:03:20.886Z",
+      "modified": "2023-01-09T23:12:49.517Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "b5ef1017-2e00-4459-9c2b-10330772d2e6",
+      "colId": "5f1a8a5c-fc9e-4f5c-9d8a-b301f12a31a2",
+      "containerId": "",
+      "name": "http://localhost:3000/authors",
+      "url": "http://localhost:3000/authors",
+      "method": "GET",
+      "sortNum": 60000,
+      "created": "2023-01-09T23:06:24.141Z",
+      "modified": "2023-01-09T23:06:44.506Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "0ad8f965-afd3-468d-a34f-c51c4dbd9093",
+      "colId": "5f1a8a5c-fc9e-4f5c-9d8a-b301f12a31a2",
+      "containerId": "",
+      "name": "http://localhost:3000/authors/id",
+      "url": "http://localhost:3000/authors/63bc9a30c37a7d2fef7bfa5a",
+      "method": "GET",
+      "sortNum": 70000,
+      "created": "2023-01-09T23:06:47.853Z",
+      "modified": "2023-01-09T23:07:10.251Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    },
+    {
+      "_id": "cf49577b-8c2c-469e-a703-b5d692144ff3",
+      "colId": "5f1a8a5c-fc9e-4f5c-9d8a-b301f12a31a2",
+      "containerId": "",
+      "name": "http://localhost:3000/authors",
+      "url": "http://localhost:3000/authors",
+      "method": "POST",
+      "sortNum": 80000,
+      "created": "2023-01-09T23:07:25.662Z",
+      "modified": "2023-01-09T23:08:05.084Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"Alejandro Magno\",\n  \"birthDate\": 1999\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "e868c28f-7bc1-4e6b-9c75-2905925ac3a3",
+      "colId": "5f1a8a5c-fc9e-4f5c-9d8a-b301f12a31a2",
+      "containerId": "",
+      "name": "http://localhost:3000/authors/id",
+      "url": "http://localhost:3000/authors/63bc9edcb95e4c63d7748fe7",
+      "method": "PUT",
+      "sortNum": 90000,
+      "created": "2023-01-09T23:08:47.066Z",
+      "modified": "2023-01-09T23:10:32.785Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"name\": \"Alejandro Magnus\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "f9c6bd42-ec4d-4c9a-abf4-fa326fa0da73",
+      "colId": "5f1a8a5c-fc9e-4f5c-9d8a-b301f12a31a2",
+      "containerId": "",
+      "name": "http://localhost:3000/authors/id",
+      "url": "http://localhost:3000/authors/63bc9edcb95e4c63d7748fe7",
+      "method": "DELETE",
+      "sortNum": 100000,
+      "created": "2023-01-09T23:09:33.522Z",
+      "modified": "2023-01-09T23:10:37.098Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    }
+  ]
+}

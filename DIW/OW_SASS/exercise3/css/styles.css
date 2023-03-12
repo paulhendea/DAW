@@ -1,0 +1,189 @@
+.text-center {
+  text-align: center;
+}
+
+.p-0 {
+  padding: 0rem;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+.p-3 {
+  padding: 1.5rem;
+}
+
+.p-4 {
+  padding: 2rem;
+}
+
+.row > .col-1 {
+  padding: 1rem;
+  width: 12.5%;
+}
+
+.row > .col-2 {
+  padding: 1rem;
+  width: 25%;
+}
+
+.row > .col-3 {
+  padding: 1rem;
+  width: 37.5%;
+}
+
+.row > .col-4 {
+  padding: 1rem;
+  width: 50%;
+}
+
+.row > .col-5 {
+  padding: 1rem;
+  width: 62.5%;
+}
+
+.row > .col-6 {
+  padding: 1rem;
+  width: 75%;
+}
+
+.row > .col-7 {
+  padding: 1rem;
+  width: 87.5%;
+}
+
+.row > .col-8 {
+  padding: 1rem;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+}
+.btn:hover {
+  box-shadow: 0.2rem 0.2rem #aaa;
+}
+.btn:active {
+  background-color: orange;
+  color: white;
+}
+
+.btn-error {
+  background-image: linear-gradient(to bottom, red 70%, #333 30%);
+}
+
+.btn-warning {
+  background-image: linear-gradient(to bottom, orange 70%, #333 30%);
+}
+
+.btn-accepted {
+  background-image: linear-gradient(to bottom, green 70%, #333 30%);
+}
+
+.btn-normal {
+  background-image: linear-gradient(to bottom, blue 70%, #333 30%);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+tbody tr td:nth-child(1) {
+  background-color: #888;
+}
+
+tbody tr td:nth-child(2) {
+  background-color: #ccc;
+}
+
+tbody tr td:nth-child(3) {
+  background-color: #888;
+}
+
+tbody tr td:nth-child(4) {
+  background-color: #ccc;
+}
+
+tbody tr td:nth-child(5) {
+  background-color: #888;
+}
+
+tbody tr td:nth-child(6) {
+  background-color: #ccc;
+}
+
+tbody tr td:nth-child(7) {
+  background-color: #888;
+}
+
+tbody tr td:nth-child(8) {
+  background-color: #ccc;
+}
+
+tbody tr td:nth-child(9) {
+  background-color: #888;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: rgb(155, 111, 145);
+  padding: 0.2rem;
+}
+nav ul li {
+  display: inline-block;
+  padding-inline: 1rem;
+}
+nav ul li:active {
+  color: #ccc;
+  font-weight: bold;
+}
+nav ul li:hover {
+  color: #ccc;
+}
+nav ul li a {
+  text-decoration: none;
+}
+
+figure.card {
+  border: 0.1rem solid #333;
+  border-radius: 1rem;
+  display: inline-block;
+  padding: 1rem;
+}
+figure.card img {
+  border-radius: 2rem;
+  width: 100%;
+}
+figure.card img:hover {
+  transition: linear 1s;
+  transform: rotate(720deg);
+}
+figure.card figcaption {
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  text-align: center;
+}

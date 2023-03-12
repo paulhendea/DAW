@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main h3 {
+  margin-bottom: 1em;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+form p {
+  margin-bottom: 1em;
+}
+
+form input.expand,
+form textarea {
+  width: 100%;
+}
+
+form p:last-child {
+  margin-block-start: 2em;
+}
+
+form p:last-child input {
+  padding: 0.2em;
+  padding-inline: 1em;
+}
